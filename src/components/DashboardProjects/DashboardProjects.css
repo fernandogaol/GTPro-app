@@ -1,0 +1,17 @@
+.DashboardProjects__app {
+  width: 32%;
+  margin: 3px auto;
+  border: 1px solid black;
+  height: 500px;
+  padding: 10px;
+}
+
+.DashboardProjects__app li {
+  border: 1px solid black;
+  text-align: center;
+  padding: 2px;
+  list-style: none;
+}
+.DashboardProjects__app ul {
+  padding: 10px;
+}

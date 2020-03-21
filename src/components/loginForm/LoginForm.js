@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import './LoginForm.css';
-import store from '../../store';
 
+const users = [
+  {
+    user_name: 'test',
+    password: 'test'
+  },
+  {
+    user_name: 'test2',
+    password: 'test12'
+  }
+];
 export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {}
@@ -9,15 +18,15 @@ export default class LoginForm extends Component {
 
   state = {
     error: null,
-    user_name: store.user_name,
-    password: store.password
+    user_name: users.user_name,
+    password: users.password
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    const { user_name, password } = event.target;
-    user_name.value = '';
-    password.value = '';
+    // const { user_name, password } = event.target;
+    // user_name.value,
+    // password.value
     this.props.onLoginSuccess();
   };
 
@@ -25,7 +34,7 @@ export default class LoginForm extends Component {
     const { error } = this.state;
     return (
       <form className='LoginForm' onSubmit={this.handleSubmit}>
-        <div role='alert'>{error && <p className='red'>{error}</p>}</div>
+        <div role='alert'>{error}</div>
         <div className='user_name'>
           <label htmlFor='LoginForm__user_name'>User name:</label>
           <input required name='user_name' id='LoginForm__user_name'></input>

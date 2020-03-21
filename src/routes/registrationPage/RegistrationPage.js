@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RegistrationForm from '../../components/registrationForm/RegistrationForm';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import './RegistrationPage.css';
 
 export default class RegistrationPage extends Component {

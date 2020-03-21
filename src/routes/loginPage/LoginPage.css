@@ -1,5 +1,5 @@
-section {
-  height: 83vh;
+.LoginPage {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,10 +8,10 @@ section {
   margin: auto;
   font-weight: bold;
 }
-section h2 {
+.LoginPage h2 {
   padding: 20px;
 }
-input {
+.LoginPage input {
   border: 1px solid #ddd;
   display: block;
   font-size: 1em;
@@ -22,11 +22,11 @@ input {
   border-radius: 4px;
 }
 
-label {
+.LoginPage label {
   padding: 2px;
   font-size: 1.1rem;
 }
-button {
+.LoginPage button {
   order: 1px solid #aaa;
   background-color: #eee;
   font-size: 1em;

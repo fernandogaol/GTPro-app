@@ -1,13 +1,15 @@
 .nav-app {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  background-color: rgb(28, 51, 114);
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(39, 146, 84);
 }
-/* nav {
+nav {
   position: fixed;
   width: 100%;
-} */
+  top: 0;
+}
 .nav-app h1 a,
 span a {
   color: #fff;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LoginForm from '../../components/loginForm/LoginForm';
+import LoginForm from '../../components/LoginForm/LoginForm';
 import './LoginPage.css';
 
 export default class LoginPage extends Component {
@@ -10,8 +10,9 @@ export default class LoginPage extends Component {
     }
   };
   handleLoginSuccess = () => {
+    console.log('hey');
     const { location, history } = this.props;
-    const destination = (location.state || {}).from || '/';
+    const destination = (location.state || {}).from || '/dashboard';
     history.push(destination);
   };
 
@@ -19,7 +20,7 @@ export default class LoginPage extends Component {
     return (
       <section className='LoginPage'>
         <h2>Log In </h2>
-        <LoginForm onLoginSucess={this.handleLoginSuccess} />
+        <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </section>
     );
   }
