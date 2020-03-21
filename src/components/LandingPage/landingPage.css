@@ -1,0 +1,9 @@
+.section-app {
+  height: 100vh;
+  text-align: center;
+  padding: 30px;
+}
+
+.section-two {
+  background-color: rgb(100, 100, 165);
+}

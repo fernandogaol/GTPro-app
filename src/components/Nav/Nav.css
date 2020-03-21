@@ -1,0 +1,19 @@
+.nav-app {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: rgb(28, 51, 114);
+}
+/* nav {
+  position: fixed;
+  width: 100%;
+} */
+.nav-app h1 a,
+span a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-app span a {
+  padding: 20px;
+}
