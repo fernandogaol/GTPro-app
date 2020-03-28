@@ -6,7 +6,20 @@ import LoginPage from '../../routes/LoginPage/LoginPage';
 import DashboardPage from '../../routes/DashboardPage/DashboardPage';
 import './App.css';
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage';
+import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
+import config from '../../config';
+
 export default class App extends Component {
+  componentDidMount() {
+    return fetch(`${config.API_ENDPOINT}/cards`, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json'
+        // authorization: `basic ${TokenService.getAuthToken()}`
+      }
+    }).then(res => res.json());
+    // .then(data => console.log(data));
+  }
   render() {
     return (
       <div className='App'>
@@ -19,6 +32,7 @@ export default class App extends Component {
             <Route path={'/register'} component={RegistrationPage} />
             <Route path={'/login'} component={LoginPage} />
             <Route path={'/dashboard'} component={DashboardPage} />
+            <Route component={NotFoundPage} />
           </Switch>
         </main>
         <footer>Footer</footer>

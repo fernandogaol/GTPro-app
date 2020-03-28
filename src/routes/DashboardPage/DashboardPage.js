@@ -6,7 +6,7 @@ export default class DashboardPage extends Component {
   render() {
     return (
       <section className='DashboardPage'>
-        <h2>Dashboard </h2>
+        <h2>project</h2>
         <Dashboard />
       </section>
     );

@@ -1,0 +1,9 @@
+section {
+  height: 94vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './DashboardItems.css';
+import './DashboardCards.css';
 
-export default class DashboardItems extends Component {
+export default class DashboardCards extends Component {
   render() {
     return (
       <section className='DashboardItems__app'>

@@ -5,11 +5,11 @@
   padding: 15px;
   background-color: rgb(39, 146, 84);
 }
-nav {
+/* nav {
   position: fixed;
   width: 100%;
   top: 0;
-}
+} */
 .nav-app h1 a,
 span a {
   color: #fff;
