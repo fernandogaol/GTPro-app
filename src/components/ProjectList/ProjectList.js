@@ -7,15 +7,15 @@ import './ProjectList.css';
 export default class ProjectList extends Component {
   static contextType = ProjectListContext;
 
-  componentDidMount() {
+  componentDidMount(userId) {
     this.context.clearError();
-    ProjectApiService.getProjects()
+    ProjectApiService.getProject(userId)
       .then(this.context.setProjectList)
       .catch(this.context.setError);
   }
   renderProjects() {
     const { projectList = [] } = this.context;
-    return projectList.map(project => (
+    return projectList.map((project) => (
       <DashboardProjects project={project} key={project.id} />
     ));
   }

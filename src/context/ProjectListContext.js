@@ -5,28 +5,26 @@ const ProjectListContext = React.createContext({
   error: null,
   setError: () => {},
   clearError: () => {},
-  setProjectList: () => {}
+  setProjectList: () => {},
 });
 export default ProjectListContext;
 
 export class ProjectListProvider extends Component {
   state = {
     projectList: [],
-    user_id: [],
-    user_name: [],
-    error: null
+    error: null,
   };
 
-  setProjectList = projectList => {
+  setProjectList = (projectList) => {
     this.setState({ projectList });
   };
-  setUserId = user_id => {
-    this.setState({ user_id });
-  };
-  setUserName = user_name => {
-    this.setState({ user_name });
-  };
-  setError = error => {
+  // setUserId = user_id => {
+  //   this.setState({ user_id });
+  // };
+  // setUserName = user_name => {
+  //   this.setState({ user_name });
+  // };
+  setError = (error) => {
     console.error(error);
     this.setState({ error });
   };
@@ -41,7 +39,7 @@ export class ProjectListProvider extends Component {
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setProjectList: this.setProjectList
+      setProjectList: this.setProjectList,
     };
     return (
       <ProjectListContext.Provider value={value}>

@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../context/UserContext';
+import ProjectListContext from '../../context/ProjectListContext';
+import ProjectApiService from '../../services/projects-api-service';
 
 import './LoginForm.css';
 
 export default class LoginForm extends Component {
   static defaultProps = {
-    onLoginSuccess: () => {}
+    onLoginSuccess: () => {},
   };
+
+  static contextType = UserContext;
+  static contextType = ProjectListContext;
 
   state = { error: null };
 
-  handleSubmitBasicAuth = ev => {
+  handleSubmitBasicAuth = (ev) => {
     ev.preventDefault();
     const { user_name, password } = ev.target;
 
@@ -24,22 +30,26 @@ export default class LoginForm extends Component {
     this.props.onLoginSuccess();
   };
 
-  handleSubmitJwtAuth = ev => {
+  handleSubmitJwtAuth = (ev) => {
     ev.preventDefault();
     this.setState({ error: null });
     const { user_name, password } = ev.target;
 
     AuthApiService.postLogin({
       user_name: user_name.value,
-      password: password.value
+      password: password.value,
     })
-      .then(res => {
+      .then((res) => {
         user_name.value = '';
         password.value = '';
         TokenService.saveAuthToken(res.authToken);
+        this.UserContext.setUser(res.dbUser);
+        ProjectApiService.getProject(res.dbUser.id).then(
+          this.ProjectListContext.setProjectList
+        );
         this.props.onLoginSuccess();
       })
-      .catch(res => {
+      .catch((res) => {
         this.setState({ error: res.error });
       });
   };
