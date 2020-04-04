@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TokenService from '../../services/token-service';
-import './Nav.css';
+import './Header.css';
 
-export default class Nav extends Component {
+export default class Header extends Component {
   handleLogoutClick = () => {
     TokenService.clearAuthToken();
   };
@@ -11,7 +12,7 @@ export default class Nav extends Component {
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
-        <Link onClick={this.handleLogoutClick} to='/login'>
+        <Link onClick={this.handleLogoutClick} to='/'>
           Logout
         </Link>
       </div>
@@ -21,24 +22,28 @@ export default class Nav extends Component {
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
-        <Link to='/'>Home</Link>
-        <Link to='/register'>Register</Link>
         <Link to='/login'>Log in</Link>
+        <Link to='/register'>Register</Link>
       </div>
     );
   }
+
   render() {
     return (
       <>
-        <nav className='nav-app'>
+        <nav className='Header'>
           <h1>
-            <Link to='/'>GT Pro</Link>
+            <Link to='/'>
+              <FontAwesomeIcon className='blue' icon='gift' /> Thingful
+            </Link>
           </h1>
-          {/* <span className='Header__tagline--wide'>Rate all the things.</span> */}
+          <span className='Header__tagline--wide'>Rate all the things.</span>
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
         </nav>
+
+        <span className='Header__tagline--narrow'>Rate all the things.</span>
       </>
     );
   }

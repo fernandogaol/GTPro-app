@@ -8,6 +8,7 @@ import './App.css';
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage';
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import config from '../../config';
+import DashboardList from '../../routes/DashboardList/DashboardList';
 
 export default class App extends Component {
   componentDidMount() {
@@ -32,6 +33,7 @@ export default class App extends Component {
             <Route path={'/register'} component={RegistrationPage} />
             <Route path={'/login'} component={LoginPage} />
             <Route path={'/dashboard'} component={DashboardPage} />
+            <Route exat path={'/lists'} component={DashboardList} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>

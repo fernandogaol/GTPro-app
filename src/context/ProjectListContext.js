@@ -12,13 +12,20 @@ export default ProjectListContext;
 export class ProjectListProvider extends Component {
   state = {
     projectList: [],
+    user_id: [],
+    user_name: [],
     error: null
   };
 
   setProjectList = projectList => {
     this.setState({ projectList });
   };
-
+  setUserId = user_id => {
+    this.setState({ user_id });
+  };
+  setUserName = user_name => {
+    this.setState({ user_name });
+  };
   setError = error => {
     console.error(error);
     this.setState({ error });

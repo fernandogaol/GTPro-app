@@ -1,6 +1,6 @@
-.DashboardProjects a {
+.Lists h3 {
   border: 1px solid black;
-  line-height: 3rem;
+  line-height: 2rem;
   width: 200px;
   list-style: none;
   text-decoration: none;

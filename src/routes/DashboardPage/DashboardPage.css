@@ -1,7 +1,6 @@
 .DashboardPage {
-  height: 100vh;
+  height: 90vh;
 }
 .DashboardPage h2 {
-  margin-top: 65px;
-  padding: 15px;
+  padding: 20px;
 }
