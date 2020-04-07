@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
-import UserContext from '../../context/UserContext';
-import ProjectListContext from '../../context/ProjectListContext';
+import UserContext from '../../context/ProjectsForUserContext';
 import ProjectApiService from '../../services/projects-api-service';
 
 import './LoginForm.css';
+import ProjectList from '../ProjectList/ProjectList';
 
 export default class LoginForm extends Component {
   static defaultProps = {
@@ -13,14 +13,13 @@ export default class LoginForm extends Component {
   };
 
   static contextType = UserContext;
-  static contextType = ProjectListContext;
+  // static contextType = ProjectListContext;
 
   state = { error: null };
 
   handleSubmitBasicAuth = (ev) => {
     ev.preventDefault();
     const { user_name, password } = ev.target;
-
     TokenService.saveAuthToken(
       TokenService.makeBasicAuthToken(user_name.value, password.value)
     );
@@ -43,10 +42,7 @@ export default class LoginForm extends Component {
         user_name.value = '';
         password.value = '';
         TokenService.saveAuthToken(res.authToken);
-        this.UserContext.setUser(res.dbUser);
-        ProjectApiService.getProject(res.dbUser.id).then(
-          this.ProjectListContext.setProjectList
-        );
+        this.context.setUserId(res.userId);
         this.props.onLoginSuccess();
       })
       .catch((res) => {

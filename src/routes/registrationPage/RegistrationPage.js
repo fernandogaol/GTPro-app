@@ -5,13 +5,13 @@ import './RegistrationPage.css';
 export default class RegistrationPage extends Component {
   static defaultProps = {
     history: {
-      push: () => {}
-    }
+      push: () => {},
+    },
   };
 
-  handleRegistrationSuccess = user => {
+  handleRegistrationSuccess = (user) => {
     const { history } = this.props;
-    history.push('/dashboard');
+    history.push('/login');
   };
 
   render() {

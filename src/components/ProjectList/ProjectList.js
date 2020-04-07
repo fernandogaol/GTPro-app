@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import ProjectListContext from '../../context/ProjectListContext';
 import ProjectApiService from '../../services/projects-api-service';
 import DashboardProjects from '../DashboardProjects/DashboardProjects';
+import UserContext from '../../context/ProjectsForUserContext';
 import './ProjectList.css';
+// import UserContext from '../../context/UserContext';
 
 export default class ProjectList extends Component {
-  static contextType = ProjectListContext;
+  // static contextType = ProjectListContext;
+  static contextType = UserContext;
 
   componentDidMount(userId) {
     this.context.clearError();
-    ProjectApiService.getProject(userId)
+    ProjectApiService.getProject(this.context.userId)
       .then(this.context.setProjectList)
       .catch(this.context.setError);
   }
