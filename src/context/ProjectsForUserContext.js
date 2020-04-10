@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
 
 const userContext = React.createContext({
+  project: [],
   userId: [],
-  projectList: [],
+  projectId: [],
+  list: [],
+  newProject: [],
   error: null,
   setError: () => {},
   clearError: () => {},
   setuserId: () => {},
+  setList: () => {},
+  setProject: () => {},
+  setProjectId: () => {},
+  addProject: () => {},
 });
 export default userContext;
 
 export class UserProvider extends Component {
   state = {
-    projectList: [],
+    project: [],
     userId: [],
+    projectId: [],
+    newProject: [],
+    list: [],
     error: null,
   };
 
@@ -21,9 +31,24 @@ export class UserProvider extends Component {
     this.setState({ userId });
     // console.log('userid:', this.state.userId);
   };
+  setProjectId = (projectId) => {
+    const getProjectId = projectId.map((p) => {
+      return p.id;
+    });
+    this.setList({ projectId: getProjectId });
+    console.log(projectId);
+  };
 
-  setProjectList = (projectList) => {
-    this.setState({ projectList });
+  setProject = (project) => {
+    this.setState({ project });
+    console.log(project);
+  };
+  addProject = (newProject) => {
+    this.setProject([...this.state.newProject, newProject]);
+  };
+
+  setList = (list) => {
+    this.setState({ list });
   };
 
   setError = (error) => {
@@ -38,12 +63,17 @@ export class UserProvider extends Component {
   render() {
     const value = {
       userId: this.state.userId,
-      projectList: this.state.projectList,
+      list: this.state.list,
+      projectId: this.state.projectId,
+      project: this.state.project,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setUserId: this.setUserId,
-      setProjectList: this.setProjectList,
+      setProject: this.setProject,
+      setList: this.setList,
+      setProjectId: this.setProjectId,
+      addProject: this.addProject,
     };
     return (
       <userContext.Provider value={value}>

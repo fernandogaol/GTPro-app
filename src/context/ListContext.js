@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 
 const ListContext = React.createContext({
   list: [],
+  projectId: [],
   error: null,
   setError: () => {},
   clearError: () => {},
-  setList: () => {}
+  setList: () => {},
+  setProjects: () => {},
 });
 export default ListContext;
 
 export class ListProvider extends Component {
   state = {
     List: [],
-    error: null
+    projectId: [],
+    error: null,
   };
 
-  setList = list => {
+  setList = (list) => {
     this.setState({ list });
   };
-
-  setError = error => {
+  setProjects = (projectId) => {
+    this.setState({ projectId });
+  };
+  setError = (error) => {
     console.error(error);
     this.setState({ error });
   };
@@ -34,7 +39,8 @@ export class ListProvider extends Component {
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setList: this.setList
+      setList: this.setList,
+      setProjects: this.setProjects,
     };
     return (
       <ListContext.Provider value={value}>

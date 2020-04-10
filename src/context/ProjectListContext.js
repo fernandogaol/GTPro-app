@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const ProjectListContext = React.createContext({
-  projectList: [],
+  project: [],
   error: null,
   setError: () => {},
   clearError: () => {},
@@ -11,19 +11,14 @@ export default ProjectListContext;
 
 export class ProjectListProvider extends Component {
   state = {
-    projectList: [],
+    project: [],
     error: null,
   };
 
   setProjectList = (projectList) => {
     this.setState({ projectList });
   };
-  // setUserId = user_id => {
-  //   this.setState({ user_id });
-  // };
-  // setUserName = user_name => {
-  //   this.setState({ user_name });
-  // };
+
   setError = (error) => {
     console.error(error);
     this.setState({ error });

@@ -1,3 +1,9 @@
 .List {
   height: 90vh;
 }
+.List {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
