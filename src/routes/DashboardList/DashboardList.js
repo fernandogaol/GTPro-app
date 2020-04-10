@@ -13,7 +13,7 @@ export default class DashboardList extends Component {
 
   componentDidMount() {
     this.context.clearError();
-    // ListApiService.getList(this.context.userId)
+    ListApiService.getList(this.context.userId)
       .then(this.context.setList)
       .catch(this.context.setError);
     ///hello
