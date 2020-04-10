@@ -4,12 +4,12 @@ import './RegistrationForm.css';
 
 export default class RegistrationForm extends Component {
   static defaultProps = {
-    onRegistrationSuccess: () => {}
+    onRegistrationSuccess: () => {},
   };
 
   state = { error: null };
 
-  handleSubmit = ev => {
+  handleSubmit = (ev) => {
     ev.preventDefault();
     const { full_name, user_name, password } = ev.target;
 
@@ -18,15 +18,15 @@ export default class RegistrationForm extends Component {
     AuthApiService.postUser({
       full_name: full_name.value,
       user_name: user_name.value,
-      password: password.value
+      password: password.value,
     })
-      .then(user => {
+      .then((user) => {
         full_name.value = '';
         user_name.value = '';
         password.value = '';
         this.props.onRegistrationSuccess();
       })
-      .catch(res => {
+      .catch((res) => {
         this.setState({ error: res.error });
       });
   };
@@ -37,20 +37,15 @@ export default class RegistrationForm extends Component {
       <form className='RegistrationForm' onSubmit={this.handleSubmit}>
         <div role='alert'>{error && <p className='red'>{error}</p>}</div>
         <div className='full_name'>
-          <label htmlFor='RegistrationForm__full_name'>
-            Full name <required />
-          </label>
+          <label htmlFor='RegistrationForm__full_name'>Full name</label>
           <input
             name='full_name'
             type='text'
-            requinput
             id='RegistrationForm__full_name'
           ></input>
         </div>
         <div className='user_name'>
-          <label htmlFor='RegistrationForm__user_name'>
-            User name <required />
-          </label>
+          <label htmlFor='RegistrationForm__user_name'>User name</label>
           <input
             name='user_name'
             type='text'
@@ -66,13 +61,10 @@ export default class RegistrationForm extends Component {
           ></input>
         </div> */}
         <div className='password'>
-          <label htmlFor='RegistrationForm__password'>
-            Password <required />
-          </label>
+          <label htmlFor='RegistrationForm__password'>Password</label>
           <input
             name='password'
             type='password'
-            required
             id='RegistrationForm__password'
           ></input>
         </div>

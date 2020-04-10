@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import userContext from '../../context/ProjectsForUserContext';
 import ListApiService from '../../services/lists-api-service';
 import Lists from '../../components/Lists/Lists';
+import ProjectApiService from '../../services/projects-api-service';
 // import ProjectApiService from '../../services/projects-api-service';
 
 import './DashboardList.css';
@@ -12,9 +13,10 @@ export default class DashboardList extends Component {
 
   componentDidMount() {
     this.context.clearError();
-    ListApiService.getList(this.context.projectId)
+    // ListApiService.getList(this.context.userId)
       .then(this.context.setList)
       .catch(this.context.setError);
+    ///hello
   }
   renderLists() {
     const { list = [] } = this.context;

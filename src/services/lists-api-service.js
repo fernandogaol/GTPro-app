@@ -1,8 +1,8 @@
 import config from '../config';
 
 const ListApiService = {
-  getList(userId) {
-    return fetch(`${config.API_ENDPOINT}/lists/project/${userId}`, {
+  getList(projectId) {
+    return fetch(`${config.API_ENDPOINT}/lists/project/${projectId}`, {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
