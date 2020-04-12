@@ -11,7 +11,7 @@ export default class Nav extends Component {
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
-        <Link to='/projects'>Dashboard</Link>
+        <Link to='/projects'>Board</Link>
         <Link onClick={this.handleLogoutClick} to='/login'>
           Logout
         </Link>

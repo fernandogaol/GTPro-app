@@ -3,6 +3,7 @@ import ProjectApiService from '../../services/projects-api-service';
 import DashboardProjects from '../DashboardProjects/DashboardProjects';
 import UserContext from '../../context/ProjectsForUserContext';
 import './ProjectList.css';
+import { Redirect } from 'react-router-dom';
 // import UserContext from '../../context/UserContext';
 
 export default class ProjectList extends Component {
@@ -13,6 +14,7 @@ export default class ProjectList extends Component {
     ProjectApiService.getProject(this.context.userId)
       .then(this.context.setProject)
       .catch(this.context.setError);
+    console.log('userId:', this.context.userId);
   }
   renderProjects() {
     const { project = [] } = this.context;
@@ -20,22 +22,24 @@ export default class ProjectList extends Component {
       <DashboardProjects project={project} key={project.id} />
     ));
   }
-  // handleSubmit = (ev) => {
-  //   ev.preventDefault();
-  //   const { title } = ev.target;
 
-  //   this.setState({ error: null });
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    const { title, user_id } = ev.target;
 
-  //   ProjectApiService.postProject({
-  //     title: title.value,
-  //   })
-  //     .then((newProject) => {
-  //       title.value = '';
-  //     })
-  //     .catch((res) => {
-  //       this.setState({ error: res.error });
-  //     });
-  // };
+    this.setState({ error: null });
+
+    ProjectApiService.postProject({
+      title: title.value,
+      user_id: this.context.userId,
+    })
+      .then((newProject) => {
+        title.value = '';
+      })
+      .catch((res) => {
+        this.setState({ error: res.error });
+      });
+  };
 
   render() {
     const { error } = this.context;
@@ -47,7 +51,7 @@ export default class ProjectList extends Component {
           this.renderProjects()
         )}
         <form onSubmit={this.handleSubmit}>
-          <textarea name='title' type='text' requinput></textarea>
+          <input name='title'></input>
           <button>Add project +</button>
         </form>
       </section>

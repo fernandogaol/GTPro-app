@@ -20,13 +20,13 @@ const ProjectApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
-  postProject(project) {
+  postProject(newProject) {
     return fetch(`${config.API_ENDPOINT}/projects`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(project),
+      body: JSON.stringify(newProject),
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );

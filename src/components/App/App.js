@@ -33,12 +33,8 @@ export default class App extends Component {
             <Route exact path={'/'} component={LandingPage} />
             <Route path={'/register'} component={RegistrationPage} />
             <Route path={'/login'} component={LoginPage} />
-            <Route path={'/projects'} component={ProjectList} />
-            <Route
-              exat
-              path={'/projects/:id/lists'}
-              component={DashboardList}
-            />
+            <Route exact path={'/projects'} component={ProjectList} />
+            <Route path={'/projects/:id/lists'} component={DashboardList} />
             <Route component={NotFoundPage} />
           </Switch>
         </main>

@@ -9,7 +9,6 @@ export default class DashboardProjects extends Component {
     return (
       <section className='DashboardProjects'>
         <Link to={`/projects/${project.id}/lists`}>{project.title}</Link>
-        {/* <span>Date created: {project.date_created}</span> */}
       </section>
     );
   }

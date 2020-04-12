@@ -14,14 +14,10 @@ export default class DashboardList extends Component {
     match: { params: {} },
   };
   componentDidMount() {
-    // const { project } = this.context;
-    // const projectId = project.map((project) => {
-    //   return project.id;
-    // });
-    const { projectId } = this.context;
-    const project = projectId.this.props.match.params;
+    let project_id = this.props.match.params.id;
+    // const project = projectId || this.props.match.params.id;
     this.context.clearError();
-    ListApiService.getList(project)
+    ListApiService.getList(project_id)
       .then(this.context.setList)
       .catch(this.context.setError);
   }

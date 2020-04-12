@@ -38,7 +38,7 @@ export class UserProvider extends Component {
 
   setProject = (project) => {
     this.setState({ project });
-    console.log(project);
+    // console.log(project);
   };
   addProject = (newProject) => {
     this.setProject([...this.state.newProject, newProject]);
