@@ -9,16 +9,17 @@ import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage';
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import config from '../../config';
 import DashboardList from '../../routes/DashboardList/DashboardList';
+import ProjectList from '../../components/ProjectList/ProjectList';
 
 export default class App extends Component {
   componentDidMount() {
     return fetch(`${config.API_ENDPOINT}/cards`, {
       method: 'GET',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
         // authorization: `basic ${TokenService.getAuthToken()}`
-      }
-    }).then(res => res.json());
+      },
+    }).then((res) => res.json());
     // .then(data => console.log(data));
   }
   render() {
@@ -32,8 +33,12 @@ export default class App extends Component {
             <Route exact path={'/'} component={LandingPage} />
             <Route path={'/register'} component={RegistrationPage} />
             <Route path={'/login'} component={LoginPage} />
-            <Route path={'/dashboard'} component={DashboardPage} />
-            <Route exat path={'/lists'} component={DashboardList} />
+            <Route path={'/projects'} component={ProjectList} />
+            <Route
+              exat
+              path={'/projects/:id/lists'}
+              component={DashboardList}
+            />
             <Route component={NotFoundPage} />
           </Switch>
         </main>

@@ -32,7 +32,7 @@ export class UserProvider extends Component {
     // console.log('userid:', this.state.userId);
   };
   setProjectId = (projectId) => {
-    this.setList({ projectId });
+    this.setState({ projectId });
     console.log(projectId);
   };
 

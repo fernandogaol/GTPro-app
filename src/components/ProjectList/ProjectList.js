@@ -6,15 +6,12 @@ import './ProjectList.css';
 // import UserContext from '../../context/UserContext';
 
 export default class ProjectList extends Component {
-  // static contextType = ProjectListContext;
   static contextType = UserContext;
 
   componentDidMount() {
     this.context.clearError();
-   
     ProjectApiService.getProject(this.context.userId)
       .then(this.context.setProject)
-
       .catch(this.context.setError);
   }
   renderProjects() {
@@ -50,7 +47,7 @@ export default class ProjectList extends Component {
           this.renderProjects()
         )}
         <form onSubmit={this.handleSubmit}>
-          {/* <textarea name='title' type='text' requinput></textarea> */}
+          <textarea name='title' type='text' requinput></textarea>
           <button>Add project +</button>
         </form>
       </section>
