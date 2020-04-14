@@ -29,11 +29,29 @@ export default class DashboardList extends Component {
     return list.map((list) => <Lists list={list} key={list.id} />);
   }
 
-  // renderCards() {
-  //   const { card = [] } = this.context;
-  //   return card.map((card) => <DashboardCards card={card} key={card.id} />);
-  // }
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    const { title } = ev.target;
+    let project_id = this.props.match.params.id;
 
+    this.setState({ error: null });
+
+    ListApiService.postList({
+      title: title.value,
+      project_id: project_id,
+    })
+      .then((newList) => {
+        title.value = '';
+
+        const { list } = this.context;
+        this.setState({
+          list: [...this.state.list, list],
+        });
+      })
+      .catch((res) => {
+        this.setState({ error: res.error });
+      });
+  };
   render() {
     const { error } = this.context;
     return (
@@ -43,12 +61,13 @@ export default class DashboardList extends Component {
         {error ? (
           <p className='red'> There was an error, please try again</p>
         ) : (
-          this.renderLists()
-        )}
-        <div>
-          <textarea></textarea>
+            this.renderLists()
+          )}
+        <form onSubmit={this.handleSubmit}>
+          <input name='title'></input>
           <button>Add List +</button>
-        </div>
+        </form>
+
       </section>
     );
   }
