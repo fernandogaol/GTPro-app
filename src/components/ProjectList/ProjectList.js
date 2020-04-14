@@ -35,6 +35,11 @@ export default class ProjectList extends Component {
     })
       .then((newProject) => {
         title.value = '';
+
+        const { project } = this.context;
+        this.setState({
+          project: [...this.state.projectss, project],
+        });
       })
       .catch((res) => {
         this.setState({ error: res.error });

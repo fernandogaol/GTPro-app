@@ -9,6 +9,7 @@ export default class DashboardProjects extends Component {
     return (
       <section className='DashboardProjects'>
         <Link to={`/projects/${project.id}/lists`}>{project.title}</Link>
+        <button>Delete</button>
       </section>
     );
   }
