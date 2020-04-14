@@ -13,26 +13,24 @@ export default class DashboardCards extends Component {
       .catch(this.context.setError);
   }
 
-  // renderCards() {
-  //   const { card = [] } = this.context;
-  //   return card.map((card) => <DashboardCards card={card} key={card.id} />);
-  // }
+  renderCards() {
+    const { card = [] } = this.context;
+    return card.map((card) => <DashboardCards card={card} key={card.id} />);
+  }
 
   render() {
     const { error } = this.context;
     return (
       <section className='DashboardCards'>
-        {/* <Link to='/projects'>Go back</Link>
-        <h1>Lists</h1>
         {error ? (
           <p className='red'> There was an error, please try again</p>
         ) : (
-          this.renderLists()
+          this.renderCards()
         )}
         <div>
           <textarea></textarea>
           <button>Add List +</button>
-        </div> */}
+        </div>
       </section>
     );
   }
