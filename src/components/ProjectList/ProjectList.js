@@ -53,8 +53,8 @@ export default class ProjectList extends Component {
         {error ? (
           <p className='red'> There was an error, please try again</p>
         ) : (
-          this.renderProjects()
-        )}
+            this.renderProjects()
+          )}
         <form onSubmit={this.handleSubmit}>
           <input name='title'></input>
           <button>Add project +</button>

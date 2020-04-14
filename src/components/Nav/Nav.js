@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import TokenService from '../../services/token-service';
 import './Nav.css';
 
+
 export default class Nav extends Component {
   handleLogoutClick = () => {
     TokenService.clearAuthToken();
@@ -12,20 +13,24 @@ export default class Nav extends Component {
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
-        <Link to='/projects'>Board</Link>
-        <Link onClick={this.handleLogoutClick} to='/login'>
-          Logout
-        </Link>
-      </div>
+        <ul>
+          <li><Link to='/projects'>Board</Link></li>
+          <li><Link onClick={this.handleLogoutClick} to='/login'>
+            Logout
+        </Link></li>
+        </ul>
+      </div >
     );
   }
 
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
-        <Link to='/'>Home</Link>
-        <Link to='/register'>Register</Link>
-        <Link to='/login'>Log in</Link>
+        <ul>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/register'>Register</Link></li>
+          <li><Link to='/login'>Log in</Link></li>
+        </ul>
       </div>
     );
   }
@@ -34,9 +39,9 @@ export default class Nav extends Component {
       <>
         <nav className='nav-app'>
           <h1>
-            <Link to='/'>GT Pro</Link>
+            <header><Link to='/'>GT Pro</Link></header>
           </h1>
-          <span className='Header__tagline--wide'>Rate all the things.</span>
+
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}

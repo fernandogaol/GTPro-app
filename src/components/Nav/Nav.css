@@ -1,34 +1,4 @@
-.nav-app {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
-  background-color: rgb(39, 146, 84);
-}
-/* nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-} */
-.nav-app h1,
-span {
-  color: #fff;
+*{
+  list-style: none;
   text-decoration: none;
-}
-
-.nav-app span a {
-  text-decoration: none;
-}
-
-.Header__logged-in a,
-.Header__not-logged-in a {
-  text-decoration: none;
-  color: #fff;
-  padding: 20px;
-}
-.Header__logged-in a,
-.Header__not-logged-in a:hover {
-  text-decoration: underline;
-  color: #fff;
-  
 }
