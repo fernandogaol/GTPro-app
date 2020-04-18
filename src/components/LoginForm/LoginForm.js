@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 import UserContext from '../../context/ProjectsForUserContext';
-// import ProjectApiService from '../../services/projects-api-service';
 
 import './LoginForm.css';
-import ProjectList from '../ProjectList/ProjectList';
 
 export default class LoginForm extends Component {
   static defaultProps = {
@@ -13,7 +11,6 @@ export default class LoginForm extends Component {
   };
 
   static contextType = UserContext;
-  // static contextType = ProjectListContext;
 
   state = { error: null };
 

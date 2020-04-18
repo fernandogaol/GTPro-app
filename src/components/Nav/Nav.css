@@ -1,4 +1,91 @@
-*{
+* {
   list-style: none;
   text-decoration: none;
+}
+
+.nav-app {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+
+.nav-app header {
+  font-size: 22px;
+  text-align: center;
+  line-height: 70px;
+  background: #063146;
+  user-select: none;
+}
+
+.nav-app header a {
+  color: #fff;
+}
+
+.nav-app ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 60px;
+  font-size: 16px;
+  color: #fff;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+
+.nav-app ul li:hover a {
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.navIcon {
+  margin-right: 16px;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #042331;
+  border-radius: 3px;
+}
+
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 60px;
+  color: #fff;
+  padding: 6px 10px;
+  transition: all 0.5;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 50px;
+  height: 40px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s;
+}
+#check:checked ~ .nav-app {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 195px;
 }

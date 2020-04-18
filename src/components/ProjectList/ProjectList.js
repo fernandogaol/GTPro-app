@@ -3,8 +3,8 @@ import ProjectApiService from '../../services/projects-api-service';
 import DashboardProjects from '../DashboardProjects/DashboardProjects';
 import UserContext from '../../context/ProjectsForUserContext';
 import './ProjectList.css';
-import { Redirect } from 'react-router-dom';
-// import UserContext from '../../context/UserContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export default class ProjectList extends Component {
   static contextType = UserContext;
@@ -25,7 +25,7 @@ export default class ProjectList extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
-    const { title, user_id } = ev.target;
+    const { title } = ev.target;
 
     this.setState({ error: null });
 
@@ -50,14 +50,23 @@ export default class ProjectList extends Component {
     const { error } = this.context;
     return (
       <section className='ProjectList'>
-        {error ? (
-          <p className='red'> There was an error, please try again</p>
-        ) : (
+        <div className='renderProjects'>
+          <h1>Projects</h1>
+          {error ? (
+            <p className='red'> There was an error, please try again</p>
+          ) : (
             this.renderProjects()
           )}
+        </div>
         <form onSubmit={this.handleSubmit}>
-          <input name='title'></input>
-          <button>Add project +</button>
+          <input
+            name='title'
+            placeholder='Add new project'
+            id='titleInput'
+          ></input>
+          <button type='submit' id='addBtn'>
+            <FontAwesomeIcon icon={faPlus} id='plusBtn' />
+          </button>
         </form>
       </section>
     );

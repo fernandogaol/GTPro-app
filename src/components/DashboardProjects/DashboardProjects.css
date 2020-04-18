@@ -1,11 +1,27 @@
-.DashboardProjects a {
+.DashboardProjects {
   border: 1px solid black;
-  line-height: 3rem;
-  width: 200px;
-  list-style: none;
-  text-decoration: none;
+  border-radius: 5px;
+  background: #042331;
+  color: rgb(233, 73, 73);
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  padding: 20px;
+}
+#deleteBtn {
+  padding: 2px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  /* margin-left: 250px; */
+  text-align: center;
+  font-size: 20px;
+}
+.DashboardProjects li a {
+  color: #fff;
 }
 
-span {
-  color: black;
+.DashboardProjects li a i {
+  display: flex;
+  justify-content: space-between;
 }

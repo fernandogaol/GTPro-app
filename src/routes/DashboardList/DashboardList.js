@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import userContext from '../../context/ProjectsForUserContext';
 import ListApiService from '../../services/lists-api-service';
 import Lists from '../../components/Lists/Lists';
-import CardsApiService from '../../services/cards-api-service';
-import DashboardCards from '../../components/DashboardCards/DashboardCards';
 
 import './DashboardList.css';
 
@@ -61,13 +59,12 @@ export default class DashboardList extends Component {
         {error ? (
           <p className='red'> There was an error, please try again</p>
         ) : (
-            this.renderLists()
-          )}
+          this.renderLists()
+        )}
         <form onSubmit={this.handleSubmit}>
           <input name='title'></input>
           <button>Add List +</button>
         </form>
-
       </section>
     );
   }

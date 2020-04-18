@@ -3,7 +3,6 @@ import Nav from '../Nav/Nav';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../../routes/LoginPage/LoginPage';
-import DashboardPage from '../../routes/DashboardPage/DashboardPage';
 import './App.css';
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage';
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
@@ -20,7 +19,6 @@ export default class App extends Component {
         // authorization: `basic ${TokenService.getAuthToken()}`
       },
     }).then((res) => res.json());
-    // .then(data => console.log(data));
   }
   render() {
     return (

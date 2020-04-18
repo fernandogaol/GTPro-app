@@ -1,3 +1,29 @@
 .ProjectList {
   display: flex;
 }
+
+#titleInput {
+  border-radius: 4px;
+  padding: 8px;
+}
+#plusBtn {
+  cursor: pointer;
+  font-size: 22px;
+}
+#plusBtn:hover {
+  color: darkgreen;
+  transition: all 0.2s ease;
+}
+span {
+  padding: 4px;
+}
+
+section h1 {
+  margin-bottom: 20px;
+}
+#addBtn {
+  border: none;
+  background: none;
+  outline: none;
+  margin: 3px;
+}
