@@ -24,7 +24,7 @@
   color: #fff;
 }
 
-.nav-app ul a {
+.nav-app a {
   display: block;
   height: 100%;
   width: 100%;
@@ -38,7 +38,7 @@
   transition: 0.4s;
 }
 
-.nav-app ul li:hover a {
+.nav-app a:hover {
   padding-left: 50px;
   font-weight: bold;
 }

@@ -14,7 +14,6 @@ export default class ProjectList extends Component {
     ProjectApiService.getProject(this.context.userId)
       .then(this.context.setProject)
       .catch(this.context.setError);
-    console.log('userId:', this.context.userId);
   }
   renderProjects() {
     const { project = [] } = this.context;
@@ -23,27 +22,23 @@ export default class ProjectList extends Component {
     ));
   }
 
+  changeState = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { title } = ev.target;
+    const { userId } = this.context;
 
     this.setState({ error: null });
 
-    ProjectApiService.postProject({
-      title: title.value,
-      user_id: this.context.userId,
-    })
-      .then((newProject) => {
+    ProjectApiService.postProject({ user_id: userId, title: title.value })
+      .then(this.context.addProject)
+      .then(() => {
         title.value = '';
-
-        const { project } = this.context;
-        this.setState({
-          project: [...this.state.projectss, project],
-        });
       })
-      .catch((res) => {
-        this.setState({ error: res.error });
-      });
+      .catch(this.context.setError);
   };
 
   render() {
@@ -60,9 +55,11 @@ export default class ProjectList extends Component {
         </div>
         <form onSubmit={this.handleSubmit}>
           <input
+            type='text'
             name='title'
             placeholder='Add new project'
             id='titleInput'
+            // onChange={this.changeState}
           ></input>
           <button type='submit' id='addBtn'>
             <FontAwesomeIcon icon={faPlus} id='plusBtn' />

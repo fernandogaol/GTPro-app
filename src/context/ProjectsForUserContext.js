@@ -13,8 +13,9 @@ const userContext = React.createContext({
   setuserId: () => {},
   setList: () => {},
   setProject: () => {},
-  setProjectId: () => {},
   addProject: () => {},
+  changeState: () => {},
+  addList: () => {},
 });
 export default userContext;
 
@@ -23,7 +24,6 @@ export class UserProvider extends Component {
     project: [],
     userId: [],
     projectId: [],
-    newProject: [],
     list: [],
     card: [],
     error: null,
@@ -32,10 +32,6 @@ export class UserProvider extends Component {
   setUserId = (userId) => {
     this.setState({ userId: localStorage.setItem('user_id', userId) });
     // console.log('userid:', this.state.userId);
-  };
-  setProjectId = (projectId) => {
-    this.setState({ projectId });
-    console.log(projectId);
   };
 
   setProject = (project) => {
@@ -49,12 +45,10 @@ export class UserProvider extends Component {
     this.setState({ card });
   };
   addProject = (newProject) => {
-    this.setProject([...this.state.newProject, newProject]);
+    this.setProject([...this.state.project, newProject]);
   };
-
-  setError = (error) => {
-    console.error(error);
-    this.setState({ error });
+  addList = (newList) => {
+    this.setList([...this.state.list, newList]);
   };
 
   clearError = () => {
@@ -75,8 +69,8 @@ export class UserProvider extends Component {
       setProject: this.setProject,
       setList: this.setList,
       setCard: this.setCard,
-      setProjectId: this.setProjectId,
       addProject: this.addProject,
+      addList: this.addList,
     };
     return (
       <userContext.Provider value={value}>

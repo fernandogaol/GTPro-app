@@ -21,25 +21,20 @@ export default class Nav extends Component {
   renderLogoutLink() {
     return (
       <div className='Header__logged-in'>
-        <ul>
-          <li>
-            <Link to='/projects'>
-              {' '}
-              <FontAwesomeIcon icon={faQrcode} className='navIcon board-icon' />
-              Board
-            </Link>
-          </li>
-          <li>
-            <Link onClick={this.handleLogoutClick} to='/login'>
-              {' '}
-              <FontAwesomeIcon
-                icon={faSignOutAlt}
-                className='navIcon logout-icon'
-              />
-              Logout
-            </Link>
-          </li>
-        </ul>
+        <Link to='/projects'>
+          {' '}
+          <FontAwesomeIcon icon={faQrcode} className='navIcon board-icon' />
+          Board
+        </Link>
+
+        <Link onClick={this.handleLogoutClick} to='/login'>
+          {' '}
+          <FontAwesomeIcon
+            icon={faSignOutAlt}
+            className='navIcon logout-icon'
+          />
+          Logout
+        </Link>
       </div>
     );
   }
@@ -47,33 +42,21 @@ export default class Nav extends Component {
   renderLoginLink() {
     return (
       <div className='Header__not-logged-in'>
-        <ul>
-          <li>
-            <Link to='/'>
-              <FontAwesomeIcon icon={faHome} className='navIcon home-icon' />
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to='/register'>
-              {' '}
-              <FontAwesomeIcon
-                icon={faUserAlt}
-                className='navIcon register-icon'
-              />
-              Register
-            </Link>
-          </li>
-          <li>
-            <Link to='/login'>
-              <FontAwesomeIcon
-                icon={faSignInAlt}
-                className='navIcon login-icon'
-              />
-              Log in
-            </Link>
-          </li>
-        </ul>
+        <Link to='/'>
+          <FontAwesomeIcon icon={faHome} className='navIcon home-icon' />
+          Home
+        </Link>
+
+        <Link to='/register'>
+          {' '}
+          <FontAwesomeIcon icon={faUserAlt} className='navIcon register-icon' />
+          Register
+        </Link>
+
+        <Link to='/login'>
+          <FontAwesomeIcon icon={faSignInAlt} className='navIcon login-icon' />
+          Log in
+        </Link>
       </div>
     );
   }

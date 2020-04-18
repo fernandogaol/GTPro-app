@@ -30,25 +30,16 @@ export default class DashboardList extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { title } = ev.target;
-    let project_id = this.props.match.params.id;
+    let projectId = this.props.match.params.id;
 
     this.setState({ error: null });
 
-    ListApiService.postList({
-      title: title.value,
-      project_id: project_id,
-    })
-      .then((newList) => {
+    ListApiService.postList({ project_id: projectId, title: title.value })
+      .then(this.context.addList)
+      .then(() => {
         title.value = '';
-
-        const { list } = this.context;
-        this.setState({
-          list: [...this.state.list, list],
-        });
       })
-      .catch((res) => {
-        this.setState({ error: res.error });
-      });
+      .catch(this.context.setError);
   };
   render() {
     const { error } = this.context;
