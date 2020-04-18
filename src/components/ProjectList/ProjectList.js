@@ -45,15 +45,15 @@ export default class ProjectList extends Component {
     const { error } = this.context;
     return (
       <section className='ProjectList'>
+        <h1>Projects</h1>
         <div className='renderProjects'>
-          <h1>Projects</h1>
           {error ? (
             <p className='red'> There was an error, please try again</p>
           ) : (
             this.renderProjects()
           )}
         </div>
-        <form onSubmit={this.handleSubmit}>
+        <form className='AddProjectForm' onSubmit={this.handleSubmit}>
           <input
             type='text'
             name='title'

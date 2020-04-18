@@ -12,7 +12,7 @@
   transition: all 0.5s ease;
 }
 
-.nav-app header {
+.nav-app header a {
   font-size: 22px;
   text-align: center;
   line-height: 70px;
@@ -60,9 +60,10 @@ label #cancel {
 }
 
 label #btn {
-  left: 40px;
+  position: fixed;
+  left: 15px;
   top: 25px;
-  font-size: 60px;
+  font-size: 50px;
   color: #fff;
   padding: 6px 10px;
   transition: all 0.5;
@@ -72,6 +73,7 @@ label #cancel {
   z-index: 1111;
   left: -195px;
   top: 17px;
+  position: fixed;
   font-size: 50px;
   height: 40px;
   color: #0a5275;

@@ -36,7 +36,7 @@ export default class App extends Component {
             <Route component={NotFoundPage} />
           </Switch>
         </main>
-        <footer>Footer</footer>
+        {/* <footer>Footer</footer> */}
       </div>
     );
   }

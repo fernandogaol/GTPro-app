@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import userContext from '../../context/ProjectsForUserContext';
 import ListApiService from '../../services/lists-api-service';
 import Lists from '../../components/Lists/Lists';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './DashboardList.css';
 
@@ -45,16 +48,33 @@ export default class DashboardList extends Component {
     const { error } = this.context;
     return (
       <section className='List'>
-        <Link to='/projects'>Go back</Link>
         <h1>Lists</h1>
-        {error ? (
-          <p className='red'> There was an error, please try again</p>
-        ) : (
-          this.renderLists()
-        )}
-        <form onSubmit={this.handleSubmit}>
-          <input name='title'></input>
-          <button>Add List +</button>
+        <div className='goBackLink'>
+          <Link to='/projects'>
+            <FontAwesomeIcon icon={faChevronLeft} id='backBtn' />
+            Board
+          </Link>
+        </div>
+        <div className='renderLists'>
+          {' '}
+          {error ? (
+            <p className='red'> There was an error, please try again</p>
+          ) : (
+            this.renderLists()
+          )}
+        </div>
+
+        <form className='addListForm' onSubmit={this.handleSubmit}>
+          <input
+            type='text'
+            placeholder='Add list'
+            name='title'
+            className='addListInput'
+          ></input>
+          <button className='addListBtn' type='submit'>
+            {' '}
+            <FontAwesomeIcon icon={faPlus} id='plusBtn' />
+          </button>
         </form>
       </section>
     );

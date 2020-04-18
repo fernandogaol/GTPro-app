@@ -7,7 +7,8 @@ export default class Lists extends Component {
 
     return (
       <section className='Lists'>
-        <h3>{list.title}</h3>
+        <span>{list.title}</span>
+        <button>Delete</button>
       </section>
     );
   }

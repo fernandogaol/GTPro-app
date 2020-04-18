@@ -1,9 +1,12 @@
 .section-app {
-  height: 100vh;
+  height: 100%;
   text-align: center;
   padding: 30px;
+  font-size: 25px;
 }
-
-.section-two {
-  background-color: rgb(39, 146, 84);
+.landing__page h1 {
+  text-align: center;
+  padding: 100px;
+  font-size: 50px;
+  text-decoration: underline;
 }

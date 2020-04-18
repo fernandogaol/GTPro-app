@@ -1,10 +1,9 @@
 .DashboardProjects {
-  border: 1px solid black;
   border-radius: 5px;
   background: #042331;
   color: rgb(233, 73, 73);
   width: 300px;
-  height: 40px;
+  height: 100%;
   margin: 10px;
   padding: 20px;
   display: flex;
@@ -18,4 +17,34 @@
   color: #fff;
   list-style: none;
   text-decoration: none;
+}
+.renderLists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 100px;
+}
+.addListForm {
+  display: flex;
+  justify-content: center;
+}
+
+.List a {
+  color: grey;
+  padding: 10px;
+  font-size: 30px;
+}
+form .addListInput {
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
+}
+
+#backBtn {
+  color: green;
+  font-size: 30px;
+}
+
+.goBackLink icon {
+  margin: 20px;
 }

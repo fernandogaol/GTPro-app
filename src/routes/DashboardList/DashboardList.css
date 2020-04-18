@@ -1,9 +1,16 @@
 .List {
-  height: 90vh;
+  display: flex;
+  height: 100%;
+  margin: auto;
 }
 .List {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.addListBtn {
+  border: none;
+  background: none;
+  outline: none;
+  margin: 3px;
 }

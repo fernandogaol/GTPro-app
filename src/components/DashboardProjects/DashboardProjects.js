@@ -10,6 +10,7 @@ export default class DashboardProjects extends Component {
 
     return (
       <section className='DashboardProjects'>
+        
         <Link to={`/projects/${project.id}/lists`}>{project.title}</Link>
         <FontAwesomeIcon icon={faTrashAlt} id='deleteBtn' />
       </section>

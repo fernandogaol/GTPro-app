@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
   render() {
     return (
       <div className='landing__page'>
-        <section className='section-app section-one'>Section 1</section>
-        <section className='section-app section-two'>Section 2</section>
-        <section className='section-app section-three'>Section 3</section>
+        <h1>GT Pro</h1>
+        <section className='section-app section-one'>
+          Welcome to GT Pro, your most efficient and practical project manager.
+          Start managing your projects now!{' '}
+          <Link to='/register'>Register now for free!</Link>
+        </section>
       </div>
     );
   }
