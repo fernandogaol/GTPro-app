@@ -22,10 +22,6 @@ export default class ProjectList extends Component {
     ));
   }
 
-  changeState = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
   handleSubmit = (ev) => {
     ev.preventDefault();
     const { title } = ev.target;

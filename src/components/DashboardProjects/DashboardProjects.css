@@ -48,3 +48,9 @@ form .addListInput {
 .goBackLink icon {
   margin: 20px;
 }
+
+#deleteBtn {
+  border: none;
+  background: none;
+  outline: none;
+}

@@ -64,7 +64,7 @@ export default class Nav extends Component {
     return (
       <>
         <input type='checkbox' id='check'></input>
-        <label for='check'>
+        <label htmlFor='check'>
           <FontAwesomeIcon icon={faBars} id='btn' />
           <FontAwesomeIcon icon={faTimes} id='cancel' />
         </label>

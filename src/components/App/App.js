@@ -9,6 +9,8 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
 import config from '../../config';
 import DashboardList from '../../routes/DashboardList/DashboardList';
 import ProjectList from '../../components/ProjectList/ProjectList';
+import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute';
+import PrivateRoute from '../../components/Utils/PrivateRoute';
 
 export default class App extends Component {
   componentDidMount() {
@@ -29,10 +31,17 @@ export default class App extends Component {
         <main className='App__main'>
           <Switch>
             <Route exact path={'/'} component={LandingPage} />
-            <Route path={'/register'} component={RegistrationPage} />
-            <Route path={'/login'} component={LoginPage} />
-            <Route exact path={'/projects'} component={ProjectList} />
-            <Route path={'/projects/:id/lists'} component={DashboardList} />
+            <PublicOnlyRoute path={'/register'} component={RegistrationPage} />
+
+            <PublicOnlyRoute path={'/login'} component={LoginPage} />
+
+            <PrivateRoute exact path={'/projects'} component={ProjectList} />
+
+            <PrivateRoute
+              path={'/projects/:id/lists'}
+              component={DashboardList}
+            />
+
             <Route component={NotFoundPage} />
           </Switch>
         </main>

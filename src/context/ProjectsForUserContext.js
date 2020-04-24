@@ -16,6 +16,7 @@ const userContext = React.createContext({
   addProject: () => {},
   changeState: () => {},
   addList: () => {},
+  deleteProject: () => {},
 });
 export default userContext;
 
@@ -50,7 +51,11 @@ export class UserProvider extends Component {
   addList = (newList) => {
     this.setList([...this.state.list, newList]);
   };
-
+  deleteProject = (project) => {
+    this.setProject({
+      project,
+    });
+  };
   clearError = () => {
     this.setState({ error: null });
   };
@@ -71,6 +76,7 @@ export class UserProvider extends Component {
       setCard: this.setCard,
       addProject: this.addProject,
       addList: this.addList,
+      deleteProject: this.deleteProject,
     };
     return (
       <userContext.Provider value={value}>
