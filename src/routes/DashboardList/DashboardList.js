@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userContext from '../../context/ProjectsForUserContext';
 import ListApiService from '../../services/lists-api-service';
+import CardsApiService from '../../services/cards-api-service';
+import Cards from '../../components/Cards/Cards';
 import Lists from '../../components/Lists/Lists';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -18,16 +20,37 @@ export default class DashboardList extends Component {
   componentDidMount() {
     let project_id = this.props.match.params.id;
     const { list } = this.context;
+    const listId = [];
+
+    // for (let i = 0; i < list.length; i++) {
+    //   return list[i].push(listId);
+    // }
     this.context.clearError();
     ListApiService.getList(project_id)
       .then(this.context.setList)
       .catch(this.context.setError);
-    console.log('List:', list);
+    CardsApiService.getCards()
+      .then(this.context.setCard)
+      .catch(this.context.setError);
   }
   renderLists() {
     const { list = [] } = this.context;
+    const { card = [] } = this.context;
 
-    return list.map((list) => <Lists list={list} key={list.id} />);
+    console.log(card);
+
+    return list.map((list) => {
+      // if (card.list_id === list.id) {
+
+      // }
+      return <Lists list={list} key={list.id} />;
+    });
+  }
+
+  renderCards() {
+    const { card = [] } = this.context;
+
+    return card.map((cards) => <Cards cards={cards} key={cards.id} />);
   }
 
   handleSubmit = (ev) => {
@@ -62,6 +85,7 @@ export default class DashboardList extends Component {
           ) : (
             this.renderLists()
           )}
+          {this.renderCards()}
         </div>
 
         <form className='addListForm' onSubmit={this.handleSubmit}>

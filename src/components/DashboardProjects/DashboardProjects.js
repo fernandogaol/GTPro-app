@@ -13,7 +13,7 @@ export default class DashboardProjects extends Component {
     const { project } = this.props;
 
     ProjectApiService.deleteProject(project.id)
-      .then(this.context.deleteProject)
+      .then(this.context.deleteProjects(project.id))
       .catch(this.context.setError);
   }
   render() {

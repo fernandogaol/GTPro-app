@@ -35,7 +35,6 @@ const ProjectApiService = {
     return fetch(`${config.API_ENDPOINT}/projects/${projectId}`, {
       method: 'DELETE',
       headers: {
-        Accept: 'application/json',
         'content-type': 'application/json',
       },
     }).then((res) =>

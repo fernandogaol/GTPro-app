@@ -1,16 +1,17 @@
-// import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-// import './DashboardProjects.css';
+import React, { Component } from 'react';
+// import './Cards.css';
 
-// export default class DashboardProjects extends Component {
-//   render() {
-//     const { project } = this.props;
+export default class Cards extends Component {
+  render() {
+    const { cards } = this.props;
 
-//     return (
-//       <section className='DashboardProjects'>
-//         <Link to={`/projects/${project.id}/lists`}>{project.title}</Link>
-//         <button>Delete</button>
-//       </section>
-//     );
-//   }
-// }
+    return (
+      <section className='Cards'>
+        <ul>
+          <li>{cards.content}</li>
+        </ul>
+        <button>Delete</button>
+      </section>
+    );
+  }
+}
