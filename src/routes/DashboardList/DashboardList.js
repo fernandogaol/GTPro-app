@@ -37,20 +37,15 @@ export default class DashboardList extends Component {
     const { list = [] } = this.context;
     const { card = [] } = this.context;
 
-    console.log(card);
-
     return list.map((list) => {
-      // if (card.list_id === list.id) {
-
-      // }
-      return <Lists list={list} key={list.id} />;
+      return (
+        <Lists
+          list={list}
+          key={list.id}
+          cards={card.filter((card) => card.list_id === list.id)}
+        />
+      );
     });
-  }
-
-  renderCards() {
-    const { card = [] } = this.context;
-
-    return card.map((cards) => <Cards cards={cards} key={cards.id} />);
   }
 
   handleSubmit = (ev) => {
@@ -85,7 +80,6 @@ export default class DashboardList extends Component {
           ) : (
             this.renderLists()
           )}
-          {this.renderCards()}
         </div>
 
         <form className='addListForm' onSubmit={this.handleSubmit}>

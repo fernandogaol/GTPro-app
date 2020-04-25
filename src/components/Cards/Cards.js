@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Cards.css';
+import './Cards.css';
 
 export default class Cards extends Component {
   render() {
@@ -10,7 +10,6 @@ export default class Cards extends Component {
         <ul>
           <li>{cards.content}</li>
         </ul>
-        <button>Delete</button>
       </section>
     );
   }

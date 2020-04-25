@@ -17,6 +17,7 @@ const userContext = React.createContext({
   changeState: () => {},
   addList: () => {},
   deleteProjects: () => {},
+  deleteList: () => {},
 });
 export default userContext;
 
@@ -56,6 +57,12 @@ export class UserProvider extends Component {
       project: this.state.project.filter((project) => project.id !== projectId),
     });
   };
+  deleteList = (listId) => {
+    this.setState({
+      list: this.state.list.filter((list) => list.id !== listId),
+    });
+  };
+
   clearError = () => {
     this.setState({ error: null });
   };
@@ -77,6 +84,7 @@ export class UserProvider extends Component {
       addProject: this.addProject,
       addList: this.addList,
       deleteProjects: this.deleteProjects,
+      deleteList: this.deleteList,
     };
     return (
       <userContext.Provider value={value}>

@@ -1,16 +1,16 @@
 .List {
   display: flex;
-  height: 100%;
-  margin: auto;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
 }
-.List {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+
 .addListBtn {
   border: none;
   background: none;
   outline: none;
   margin: 3px;
+}
+.addListForm {
+  margin-bottom: 50px;
+  margin-top: -50px;
 }
