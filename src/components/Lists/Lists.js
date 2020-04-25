@@ -28,7 +28,7 @@ export default class Lists extends Component {
             type='submit'
             onClick={() => this.handleDelete(list.id)}
           >
-            <FontAwesomeIcon icon={faTrashAlt} />
+            <FontAwesomeIcon icon={faTrashAlt} id='dltListIcon'/>
           </button>
         </div>
         {this.props.cards.map((card) => (
@@ -39,11 +39,11 @@ export default class Lists extends Component {
             type='text'
             placeholder='Add card'
             name='content'
-            className='addListInput'
+            className='addCardInput'
           ></input>
           <button className='addCardBtn' type='submit'>
             {' '}
-            <FontAwesomeIcon icon={faPlus} id='plusBtn' />
+            <FontAwesomeIcon icon={faPlus} id='cardPlusBtn' />
           </button>
         </form>
       </section>

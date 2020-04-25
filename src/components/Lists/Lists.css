@@ -2,7 +2,7 @@
   border-radius: 5px;
   background: #042331;
   width: 300px;
-  height: 500px;
+  height: auto;
   margin: 10px;
   /* padding: 5px; */
   color: #fff;
@@ -11,7 +11,7 @@
 }
 
 .list-title {
-  background: white;
+  background: rgb(241, 238, 238);
   border: 2px solid #195e7e;
   border-radius: 5px;
   font-weight: bold;
@@ -22,22 +22,44 @@
   justify-content: space-around;
   align-items: center;
   font-size: 20px;
-  margin-bottom: 20px;
+  padding: 30px;
 }
+
 .addCardForm {
   display: flex;
   justify-content: space-evenly;
+  margin: 20px;
 }
-
+#dltListIcon {
+  color: #042331;
+  font-size: 18px;
+}
+#dltListIcon:hover {
+  color: red;
+}
 .addCardBtn {
   border: none;
   background: none;
   outline: none;
-  margin: 3px;
+  margin: 5px;
+  color: #fff;
+}
+#cardPlusBtn {
+  cursor: pointer;
+  font-size: 22px;
+}
+#cardPlusBtn:hover {
+  color: rgb(146, 253, 146);
+  transition: all 0.2s ease;
 }
 .deleteBtn {
   border: none;
   background: none;
   outline: none;
   margin: 3px;
+}
+.addCardInput {
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
 }
