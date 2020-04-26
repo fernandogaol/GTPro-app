@@ -14,3 +14,7 @@
   margin-bottom: 50px;
   margin-top: -50px;
 }
+
+.goBackLink a:hover {
+  color: #042331;
+}

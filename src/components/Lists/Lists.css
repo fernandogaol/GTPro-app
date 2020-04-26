@@ -33,6 +33,7 @@
 #dltListIcon {
   color: #042331;
   font-size: 18px;
+  cursor: pointer;
 }
 #dltListIcon:hover {
   color: red;
