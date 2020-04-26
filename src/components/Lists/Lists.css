@@ -11,18 +11,18 @@
 }
 
 .list-title {
-  background: rgb(241, 238, 238);
+  background: #fff;
   border: 2px solid #195e7e;
   border-radius: 5px;
   font-weight: bold;
-  width: 100%;
-  height: 50px;
-  display: flex;
   color: #042331;
-  justify-content: space-around;
-  align-items: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  word-break: break-all;
   font-size: 20px;
-  padding: 30px;
+  padding: 10px;
 }
 
 .addCardForm {
