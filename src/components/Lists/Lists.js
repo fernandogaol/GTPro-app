@@ -13,14 +13,16 @@ export default class Lists extends Component {
   static contextType = userContext;
 
   handleSubmit = (ev) => {
-    console.log('clicked');
     ev.preventDefault();
     const { content } = ev.target;
     const key = this.props;
+    const listId = key.list.id;
+
+    // console.log('listId', listId);
 
     this.setState({ error: null });
 
-    CardsApiService.postCard({ list_id: key, content: content.value })
+    CardsApiService.postCard({ list_id: listId, content: content.value })
       .then(this.context.addCard)
       .then(() => {
         content.value = '';

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import userContext from '../../context/ProjectsForUserContext';
 import ListApiService from '../../services/lists-api-service';
 import CardsApiService from '../../services/cards-api-service';
-import Cards from '../../components/Cards/Cards';
 import Lists from '../../components/Lists/Lists';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -19,12 +18,6 @@ export default class DashboardList extends Component {
   };
   componentDidMount() {
     let project_id = this.props.match.params.id;
-    const { list } = this.context;
-    const listId = [];
-
-    // for (let i = 0; i < list.length; i++) {
-    //   return list[i].push(listId);
-    // }
     this.context.clearError();
     ListApiService.getList(project_id)
       .then(this.context.setList)

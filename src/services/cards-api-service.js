@@ -22,6 +22,14 @@ const CardsApiService = {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
+  deleteCardById(cardId) {
+    return fetch(`${config.API_ENDPOINT}/cards/${cardId}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+      },
+    });
+  },
 };
 
 export default CardsApiService;

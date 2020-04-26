@@ -1,9 +1,28 @@
 .Cards {
   border: 1px solid white;
   border-radius: 2px;
-  height: 50px;
+  height: auto;
   width: 270px;
   color: #fff;
   background: #195e7e;
   margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: left;
+}
+#cardDltBtn {
+  border: none;
+  background: none;
+  outline: none;
+  margin: 5px;
+  color: #fff;
+}
+#cardDltBtn:hover {
+  color: red;
+}
+
+#dltCardIcon {
+  cursor: pointer;
 }
