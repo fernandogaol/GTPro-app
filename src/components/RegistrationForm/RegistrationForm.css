@@ -20,11 +20,9 @@
   padding: 2px;
   font-size: 1.1rem;
 }
-.RegistrationForm button {
-  width: 90px;
-  height: 30px;
-  padding: 2px;
-  border-radius: 3px;
+.register-button {
+  padding: 10px 22px;
+  border-radius: 5px;
   outline: none;
   display: flex;
   justify-content: center;
@@ -35,6 +33,7 @@
   border: 1px solid lightblue;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .red {

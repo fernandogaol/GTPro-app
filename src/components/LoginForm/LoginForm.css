@@ -37,6 +37,13 @@
   border: 1px solid lightblue;
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+.login-error {
+  background: #fff;
+  color: red;
+  padding: 10px;
+  margin: 5px;
 }
 @media screen and (min-width: 480px) {
   .LoginForm input {
