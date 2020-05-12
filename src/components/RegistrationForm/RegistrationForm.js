@@ -40,6 +40,7 @@ export default class RegistrationForm extends Component {
           <label htmlFor='RegistrationForm__full_name'>Full name</label>
           <input
             name='full_name'
+            placeholder='joe doe'
             type='text'
             id='RegistrationForm__full_name'
           ></input>
@@ -48,6 +49,7 @@ export default class RegistrationForm extends Component {
           <label htmlFor='RegistrationForm__user_name'>User name</label>
           <input
             name='user_name'
+            placeholder='joedoe'
             type='text'
             id='RegistrationForm__user_name'
           ></input>
@@ -64,6 +66,7 @@ export default class RegistrationForm extends Component {
           <label htmlFor='RegistrationForm__password'>Password</label>
           <input
             name='password'
+            placeholder='Password123'
             type='password'
             id='RegistrationForm__password'
           ></input>

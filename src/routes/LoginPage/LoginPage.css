@@ -1,15 +1,14 @@
-
 .LoginPage {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    font-weight: bold;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: bold;
 }
 
-.LoginPage h2{
-    padding: 20px;
+.LoginPage h2 {
+  padding: 40px;
 }

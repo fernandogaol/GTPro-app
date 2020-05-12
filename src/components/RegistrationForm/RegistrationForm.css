@@ -1,8 +1,47 @@
-form {
-  width: 30%;
+.RegistrationForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.RegistrationForm input {
+  border: 1px solid #ddd;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding: 8px;
+  text-align: left;
+  width: 220px;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+}
+
+.RegistrationForm label {
+  padding: 2px;
+  font-size: 1.1rem;
+}
+.RegistrationForm button {
+  width: 90px;
+  height: 30px;
+  padding: 2px;
+  border-radius: 3px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin: 4px auto;
+  background: rgb(50, 92, 230);
+  color: #fff;
+  border: 1px solid lightblue;
+  display: flex;
+  justify-content: center;
 }
 
 .red {
   color: red;
-  padding: 20px;
+  padding: 10px;
+  background: #fff;
+  margin: 15px 0;
+}
+@media screen and (min-width: 480px) {
 }
