@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faHome } from '@fortawesome/free-solid-svg-icons';
@@ -12,9 +12,8 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import TokenService from '../../services/token-service';
 import './Nav.css';
 
-export default class Nav extends Component {
+class Nav extends Component {
   handleLogoutClick = () => {
-    window.location.reload();
     TokenService.clearAuthToken();
   };
 
@@ -81,3 +80,5 @@ export default class Nav extends Component {
     );
   }
 }
+
+export default withRouter(Nav);

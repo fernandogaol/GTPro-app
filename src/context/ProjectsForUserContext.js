@@ -10,7 +10,7 @@ const userContext = React.createContext({
   error: null,
   setError: () => {},
   clearError: () => {},
-  setuserId: () => {},
+  setUserId: () => {},
   setList: () => {},
   setProject: () => {},
   addProject: () => {},

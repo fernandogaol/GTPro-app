@@ -54,7 +54,7 @@ export default class Lists extends Component {
           </button>
         </div>
         {this.props.cards.map((card) => (
-          <Cards cards={card} key={card.id} />
+          <Cards  cards={card} key={card.id}/>
         ))}
         <form className='addCardForm' onSubmit={this.handleSubmit}>
           <input

@@ -1,10 +1,10 @@
-.RegistrationForm {
+/* .RegistrationForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.RegistrationForm input {
+} */
+/* .RegistrationForm input {
   border: 1px solid #ddd;
   display: block;
   font-size: 1em;
@@ -14,26 +14,15 @@
   width: 220px;
   border: 1px solid lightblue;
   border-radius: 3px;
-}
+} */
 
 .RegistrationForm label {
   padding: 2px;
   font-size: 1.1rem;
 }
 .register-button {
-  padding: 10px 22px;
-  border-radius: 5px;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  margin: 4px auto;
   background: rgb(50, 92, 230);
   color: #fff;
-  border: 1px solid lightblue;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .red {

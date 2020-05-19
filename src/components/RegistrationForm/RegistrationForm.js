@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthApiService from '../../services/auth-api-service';
+import { Input, Button } from '../Utils/Utils';
 import './RegistrationForm.css';
 
 export default class RegistrationForm extends Component {
@@ -38,42 +39,42 @@ export default class RegistrationForm extends Component {
         <div role='alert'>{error && <p className='red'>{error}</p>}</div>
         <div className='full_name'>
           <label htmlFor='RegistrationForm__full_name'>Full name</label>
-          <input
+          <Input
             name='full_name'
-            placeholder='joe doe'
+            placeholder='Joe Doe'
             type='text'
             id='RegistrationForm__full_name'
-          ></input>
+          ></Input>
         </div>
         <div className='user_name'>
-          <label htmlFor='RegistrationForm__user_name'>User name</label>
-          <input
+          <label htmlFor='RegistrationForm__user_name'>Username</label>
+          <Input
             name='user_name'
-            placeholder='joedoe'
+            placeholder='JoeDoe'
             type='text'
             id='RegistrationForm__user_name'
-          ></input>
+          ></Input>
         </div>
         {/* <div className='email'>
           <label htmlFor='RegistrationForm__email'>Email</label>
-          <input
+          <Input
             name='nick_name'
             type='text'
             id='RegistrationForm__nick_name'
-          ></input>
+          ></Input>
         </div> */}
         <div className='password'>
           <label htmlFor='RegistrationForm__password'>Password</label>
-          <input
+          <Input
             name='password'
             placeholder='Password123'
             type='password'
             id='RegistrationForm__password'
-          ></input>
+          ></Input>
         </div>
-        <button className='register-button' type='submit'>
+        <Button className='register-button' type='submit'>
           Register
-        </button>
+        </Button>
       </form>
     );
   }
