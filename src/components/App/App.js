@@ -6,22 +6,12 @@ import LoginPage from '../../routes/LoginPage/LoginPage';
 import './App.css';
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage';
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage';
-import config from '../../config';
 import DashboardList from '../../routes/DashboardList/DashboardList';
 import ProjectList from '../../components/ProjectList/ProjectList';
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute';
 import PrivateRoute from '../../components/Utils/PrivateRoute';
 
 export default class App extends Component {
-  componentDidMount() {
-    return fetch(`${config.API_ENDPOINT}/cards`, {
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-        // authorization: `basic ${TokenService.getAuthToken()}`
-      },
-    }).then((res) => res.json());
-  }
   render() {
     return (
       <div className='App'>
@@ -45,7 +35,7 @@ export default class App extends Component {
             <Route component={NotFoundPage} />
           </Switch>
         </main>
-        {/* <footer>Footer</footer> */}
+        <footer></footer>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import './DashboardProjects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import ProjectApiService from '../../services/projects-api-service';
-import UserContext from '../../context/ProjectsForUserContext';
+import UserContext from '../../context/ApiContext';
 
 export default class DashboardProjects extends Component {
   static contextType = UserContext;

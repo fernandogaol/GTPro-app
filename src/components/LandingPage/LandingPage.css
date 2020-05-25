@@ -1,12 +1,333 @@
 .section-app {
-  height: 100%;
-  text-align: center;
-  padding: 30px;
-  font-size: 25px;
+  text-align: left;
+  padding: 22px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  line-height: 40px;
+  color: rgb(0, 0, 0);
+  margin-top: 50px;
 }
-.landing__page h1 {
-  text-align: center;
-  padding: 100px;
-  font-size: 50px;
-  text-decoration: underline;
+.section-1 h3 {
+  color: black;
+}
+.gtpro-welcome {
+  font-weight: bolder;
+  font-size: 28px;
+}
+.logo {
+  background: url('../Img//logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  right: 3px;
+  top: 10px;
+}
+.managing-projects {
+  background: url('../Img//managing-project.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 180px;
+  border-radius: 10px;
+}
+.section-app a {
+  color: #fff;
+  background: #61bd4f;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 7px;
+}
+.learn-more {
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  padding: 15px;
+  font-weight: bold;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+}
+.learn-tricks {
+  font-size: 25px;
+  border-radius: 40px;
+  padding: 10px;
+  color: black;
+  text-shadow: 2px 2px white;
+}
+.slide-tolearn {
+  padding: 10px;
+  color: black;
+  font-size: 23px;
+  text-shadow: 2px 2px white;
+  border: 2px solid rgb(48, 28, 224);
+  border-radius: 7px;
+}
+.learn-more li {
+  text-align: left;
+  font-size: 20px;
+  line-height: 50px;
+  list-style: inside;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  margin: 2px 40px;
+}
+.dashboard {
+  background-image: url('../Img//dashboard.jpg');
+  background-size: cover;
+  height: 90vh;
+  border: 10px solid white;
+}
+.section-2,
+.section-3,
+.section-4,
+.section-5 {
+  display: flex !important;
+  justify-content: flex-end;
+}
+.section-2 p,
+.section-3 p,
+.section-4 p,
+.section-5 p {
+  background: rgb(48, 28, 224);
+  height: 50px;
+  width: 100%;
+  color: #fff;
+}
+.section-3 p,
+.section-4 p,
+.section-5 p {
+  padding: 10px 0;
+}
+.dashboard,
+.first-project,
+.create-lists,
+.create-cards {
+  width: 370px !important;
+}
+
+.first-project {
+  background-image: url('../Img/first-project.jpg');
+  background-size: cover;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  border: 10px solid white;
+}
+.create-lists {
+  background-image: url('../Img/lists.jpg');
+  background-size: cover;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  border: 10px solid white;
+}
+.create-cards {
+  background-image: url('../Img/create-cards.jpg');
+  background-size: cover;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  border: 10px solid white;
+}
+.slick-dots {
+  height: 30px;
+  background: white;
+}
+.slick-dots li button:before {
+  font-size: 8px !important;
+}
+
+.sell-out {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: left;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  line-height: 40px;
+  margin-top: 25px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 480px) {
+  .section-app {
+    padding: 50px;
+  }
+  .managing-projects {
+    height: 220px;
+    width: 350px;
+  }
+  .learn-more {
+    padding: 30px;
+  }
+  .learn-tricks {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+  .learn-more li {
+    font-size: 22px;
+    line-height: 60px;
+  }
+  .slide-tolearn {
+    font-size: 26px;
+    padding: 20px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 750px) {
+  .section-app {
+    padding: 80px;
+    font-size: 30px;
+    line-height: 55px;
+  }
+  .gtpro-welcome {
+    font-size: 40px;
+  }
+  .managing-projects {
+    height: 350px;
+    width: 600px;
+  }
+  .learn-more {
+    padding: 40px;
+  }
+  .learn-tricks {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+  }
+  .learn-more li {
+    font-size: 26px;
+    line-height: 60px;
+  }
+  .slide-tolearn {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+  .dashboard,
+  .first-project,
+  .create-lists,
+  .create-cards {
+    height: 95vh;
+    width: 500px !important;
+    margin: 0 auto;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .section-2 p,
+  .section-3 p,
+  .section-4 p,
+  .section-5 p {
+    font-size: 18px !important;
+    height: 80px;
+  }
+  .slick-dots li button:before {
+    font-size: 15px !important;
+  }
+  .sell-out-h3 {
+    width: 500px !important;
+    font-size: 30px;
+    line-height: 60px;
+    margin: auto;
+    font-weight: 1000;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .section-app {
+    width: 80%;
+    margin: auto;
+  }
+  .managing-projects {
+    height: 400px;
+    width: 750px;
+  }
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+  .learn-more {
+    padding: 100px;
+    width: 80%;
+    margin: auto;
+  }
+  .learn-tricks {
+    font-size: 35px;
+    padding: 20px;
+    text-align: center;
+  }
+  .learn-more li {
+    font-size: 26px;
+    line-height: 70px;
+  }
+  .slide-tolearn {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+  .dashboard,
+  .first-project,
+  .create-lists,
+  .create-cards {
+    width: 500px !important;
+  }
+  .section-2 p,
+  .section-3 p,
+  .section-4 p,
+  .section-5 p {
+    font-size: 24px !important;
+  }
+  .slick-dots {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .section-app {
+    width: 60%;
+  }
+  .learn-more {
+    width: 60%;
+  }
+  .dashboard,
+  .first-project,
+  .create-lists,
+  .create-cards {
+    width: 30% !important;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .section-app {
+    width: 900px;
+  }
+  .learn-more {
+    width: 900px;
+  }
+  .dashboard,
+  .first-project,
+  .create-lists,
+  .create-cards {
+    width: 550px !important;
+  }
 }

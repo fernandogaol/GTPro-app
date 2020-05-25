@@ -34,12 +34,14 @@
 .renderLists {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 100px;
+  justify-content: center;
+  margin: 30px;
 }
 .addListForm {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .List a {
@@ -47,7 +49,7 @@
   padding: 10px;
   font-size: 30px;
 }
-form .addListInput {
+.addListInput {
   border-radius: 4px;
   padding: 8px;
   outline: none;

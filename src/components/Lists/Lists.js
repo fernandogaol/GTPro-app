@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Lists.css';
 import ListApiService from '../../services/lists-api-service';
 import Cards from '../Cards/Cards';
-import userContext from '../../context/ProjectsForUserContext';
+import userContext from '../../context/ApiContext';
 import CardsApiService from '../../services/cards-api-service';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,8 +17,6 @@ export default class Lists extends Component {
     const { content } = ev.target;
     const key = this.props;
     const listId = key.list.id;
-
-    // console.log('listId', listId);
 
     this.setState({ error: null });
 
@@ -54,7 +52,7 @@ export default class Lists extends Component {
           </button>
         </div>
         {this.props.cards.map((card) => (
-          <Cards  cards={card} key={card.id}/>
+          <Cards cards={card} key={card.id} />
         ))}
         <form className='addCardForm' onSubmit={this.handleSubmit}>
           <input

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import userContext from '../../context/ProjectsForUserContext';
+import userContext from '../../context/ApiContext';
 import ListApiService from '../../services/lists-api-service';
 import CardsApiService from '../../services/cards-api-service';
 import Lists from '../../components/Lists/Lists';
@@ -27,15 +27,15 @@ export default class DashboardList extends Component {
       .catch(this.context.setError);
   }
   renderLists() {
-    const { list = [] } = this.context;
-    const { card = [] } = this.context;
+    const { lists = [] } = this.context;
+    const { cards = [] } = this.context;
 
-    return list.map((list) => {
+    return lists.map((list) => {
       return (
         <Lists
           list={list}
           key={list.id}
-          cards={card.filter((card) => card.list_id === list.id)}
+          cards={cards.filter((card) => card.list_id === list.id)}
         />
       );
     });
@@ -57,9 +57,14 @@ export default class DashboardList extends Component {
   };
   render() {
     const { error } = this.context;
+
     return (
       <section className='List'>
-        <h1>Lists</h1>
+        <header>
+          {' '}
+          <h1>Lists</h1>
+        </header>
+
         <div className='goBackLink'>
           <Link to='/projects'>
             <FontAwesomeIcon icon={faChevronLeft} id='backBtn' />

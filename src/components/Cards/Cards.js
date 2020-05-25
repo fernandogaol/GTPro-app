@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardsApiService from '../../services/cards-api-service';
-import userContext from '../../context/ProjectsForUserContext';
+import userContext from '../../context/ApiContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import './Cards.css';
@@ -18,8 +18,6 @@ export default class Cards extends Component {
 
   render() {
     const { cards } = this.props;
-    // console.log('card:', cards);
-
     return (
       <section className='Cards'>
         <ul>

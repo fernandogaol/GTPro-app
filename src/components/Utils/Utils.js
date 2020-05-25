@@ -1,7 +1,8 @@
 import React from 'react';
-// import { format as formatDate } from 'date-fns';
+// import { format as formatDate } from 'date-fns'; // WILL BE UTILIZED IN THE FURTURE
 import './Utils.css';
 
+// WILL BE UTILIZED IN THE FURTURE
 // export function NiceDate({ date, format = 'Do MMMM YYYY' }) {
 //   return formatDate(date, format);
 // }

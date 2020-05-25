@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProjectApiService from '../../services/projects-api-service';
 import DashboardProjects from '../DashboardProjects/DashboardProjects';
-import UserContext from '../../context/ProjectsForUserContext';
+import UserContext from '../../context/ApiContext';
 import './ProjectList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -16,8 +16,8 @@ export default class ProjectList extends Component {
       .catch(this.context.setError);
   }
   renderProjects() {
-    const { project = [] } = this.context;
-    return project.map((project) => (
+    const { projects = [] } = this.context;
+    return projects.map((project) => (
       <DashboardProjects project={project} key={project.id} />
     ));
   }
@@ -41,7 +41,7 @@ export default class ProjectList extends Component {
     const { error } = this.context;
     return (
       <section className='ProjectList'>
-        <h1>Projects</h1>
+        <h1>Board</h1>
         <div className='renderProjects'>
           {error ? (
             <p className='red'> There was an error, please try again</p>
@@ -55,7 +55,6 @@ export default class ProjectList extends Component {
             name='title'
             placeholder='Add new project'
             id='titleInput'
-            // onChange={this.changeState}
           ></input>
           <button type='submit' id='addBtn'>
             <FontAwesomeIcon icon={faPlus} id='plusBtn' />

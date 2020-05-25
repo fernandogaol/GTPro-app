@@ -8,14 +8,14 @@ const TokenService = {
     return window.localStorage.getItem(config.TOKEN_KEY);
   },
   clearAuthToken() {
-    window.localStorage.removeItem(config.TOKEN_KEY);
+    window.localStorage.clear();
   },
   hasAuthToken() {
     return !!TokenService.getAuthToken();
   },
   makeBasicAuthToken(userName, password) {
     return window.btoa(`${userName}:${password}`);
-  }
+  },
 };
 
 export default TokenService;

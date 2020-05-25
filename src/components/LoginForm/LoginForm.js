@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
-import UserContext from '../../context/ProjectsForUserContext';
+import UserContext from '../../context/ApiContext';
+import { Button } from '../Utils/Utils';
 
 import './LoginForm.css';
 
@@ -13,18 +14,6 @@ export default class LoginForm extends Component {
   static contextType = UserContext;
 
   state = { error: null };
-
-  // handleSubmitBasicAuth = (ev) => {
-  //   ev.preventDefault();
-  //   const { user_name, password } = ev.target;
-  //   TokenService.saveAuthToken(
-  //     TokenService.makeBasicAuthToken(user_name.value, password.value)
-  //   );
-
-  //   user_name.value = '';
-  //   password.value = '';
-  //   this.props.onLoginSuccess();
-  // };
 
   handleSubmitJwtAuth = (ev) => {
     ev.preventDefault();
@@ -54,7 +43,7 @@ export default class LoginForm extends Component {
           {error && <p className='login-error'>{error}</p>}
         </div>
         <div className='user_name'>
-          <label htmlFor='LoginForm__user_name'>User name:</label>
+          <label htmlFor='LoginForm__user_name'>Username:</label>
           <input required name='user_name' id='LoginForm__user_name'></input>
         </div>
         <div className='password'>
@@ -66,7 +55,7 @@ export default class LoginForm extends Component {
             id='LoginForm__password'
           ></input>
         </div>
-        <button type='submit'>Login</button>
+        <Button type='submit'>Login</Button>
       </form>
     );
   }

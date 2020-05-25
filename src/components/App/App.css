@@ -7,14 +7,8 @@ body {
   background-color: rgb(225, 236, 247);
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
-  background-color: #042331;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  z-index: -1;
+.App__main {
+  overflow: auto;
+  /* padding-bottom: 60px;
+  height: 100%; */
 }

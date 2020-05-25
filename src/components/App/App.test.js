@@ -1,9 +1,18 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+// import React from 'react';
+// import { shallow } from 'enzyme';
+// import renderer from 'react-test-renderer';
+// import App from './App';
+// import { MemoryRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// describe('<App />', () => {
+//     it('Renders without crashing', () => {
+//         shallow(<MemoryRouter><App /></MemoryRouter>);
+//     });
+
+//     it('renders correctly', () => {
+//         const tree = renderer
+//             .create(<MemoryRouter><App /></MemoryRouter>)
+//             .toJSON();
+//         expect(tree).toMatchSnapshot();
+//     });
+// });

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<form
+  className="RegistrationForm"
+  onSubmit={[Function]}
+>
+  <div
+    role="alert"
+  />
+  <div
+    className="full_name"
+  >
+    <label
+      htmlFor="RegistrationForm__full_name"
+    >
+      Full name
+    </label>
+    <input
+      className="Input "
+      id="RegistrationForm__full_name"
+      name="full_name"
+      placeholder="Joe Doe"
+      type="text"
+    />
+  </div>
+  <div
+    className="user_name"
+  >
+    <label
+      htmlFor="RegistrationForm__user_name"
+    >
+      Username
+    </label>
+    <input
+      className="Input "
+      id="RegistrationForm__user_name"
+      name="user_name"
+      placeholder="JoeDoe"
+      type="text"
+    />
+  </div>
+  <div
+    className="password"
+  >
+    <label
+      htmlFor="RegistrationForm__password"
+    >
+      Password
+    </label>
+    <input
+      className="Input "
+      id="RegistrationForm__password"
+      name="password"
+      placeholder="Password123"
+      type="password"
+    />
+  </div>
+  <button
+    className="Button register-button"
+    type="submit"
+  >
+    Register
+  </button>
+</form>
+`;

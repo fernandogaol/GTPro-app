@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
-import userContext from '../../context/ProjectsForUserContext';
+import userContext from '../../context/ApiContext';
 import CardsApiService from '../../services/cards-api-service';
 
 export default class DashboardCards extends Component {
@@ -14,8 +13,8 @@ export default class DashboardCards extends Component {
   }
 
   renderCards() {
-    const { card = [] } = this.context;
-    return card.map((card) => <DashboardCards card={card} key={card.id} />);
+    const { cards = [] } = this.context;
+    return cards.map((card) => <DashboardCards card={card} key={card.id} />);
   }
 
   render() {

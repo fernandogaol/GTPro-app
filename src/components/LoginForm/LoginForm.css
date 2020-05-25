@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  text-align: left;
 }
 .LoginForm input {
   border: 1px solid #ddd;
@@ -23,21 +24,14 @@
   font-size: 1.1rem;
 }
 .LoginForm button {
-  width: 90px;
-  height: 30px;
-  padding: 2px;
-  border-radius: 3px;
-  outline: none;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  margin: 4px auto;
+  width: 100px;
   background: rgb(50, 92, 230);
   color: #fff;
-  border: 1px solid lightblue;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
+}
+#LoginForm__user_name,
+#LoginForm__password,
+#RegistrationForm__full_name {
+  margin-top: 10px;
 }
 .login-error {
   background: #fff;

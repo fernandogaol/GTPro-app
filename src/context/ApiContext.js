@@ -1,78 +1,75 @@
 import React, { Component } from 'react';
 
 const userContext = React.createContext({
-  project: [],
+  projects: [],
   userId: [],
-  projectId: [],
-  list: [],
-  card: [],
+  lists: [],
+  cards: [],
   newProject: [],
   error: null,
   setError: () => {},
-  clearError: () => {},
   setUserId: () => {},
   setList: () => {},
+  setCard: () => {},
   setProject: () => {},
   addProject: () => {},
-  changeState: () => {},
   addList: () => {},
+  addCard: () => {},
   deleteProjects: () => {},
   deleteList: () => {},
-  addCard: () => {},
   deleteCard: () => {},
+  clearError: () => {},
 });
 export default userContext;
 
 export class UserProvider extends Component {
   state = {
-    project: [],
+    projects: [],
     userId: [],
-    projectId: [],
-    list: [],
-    card: [],
+    lists: [],
+    cards: [],
     error: null,
   };
 
   setUserId = (userId) => {
     this.setState({ userId: localStorage.setItem('user_id', userId) });
-    // console.log('userid:', this.state.userId);
   };
 
-  setProject = (project) => {
-    this.setState({ project });
-    // console.log(project);
+  setProject = (projects) => {
+    this.setState({ projects });
   };
-  setList = (list) => {
-    this.setState({ list });
+  setList = (lists) => {
+    this.setState({ lists });
   };
-  setCard = (card) => {
-    this.setState({ card });
+  setCard = (cards) => {
+    this.setState({ cards });
   };
   addProject = (newProject) => {
-    this.setProject([...this.state.project, newProject]);
+    this.setProject([...this.state.projects, newProject]);
   };
   addList = (newList) => {
-    this.setList([...this.state.list, newList]);
+    this.setList([...this.state.lists, newList]);
   };
   addCard = (newCard) => {
-    this.setCard([...this.state.card, newCard]);
+    this.setCard([...this.state.cards, newCard]);
   };
   deleteProjects = (projectId) => {
     this.setState({
-      project: this.state.project.filter((project) => project.id !== projectId),
+      projects: this.state.projects.filter(
+        (project) => project.id !== projectId
+      ),
     });
   };
   deleteList = (listId) => {
     this.setState({
-      list: this.state.list.filter((list) => list.id !== listId),
+      lists: this.state.lists.filter((list) => list.id !== listId),
     });
   };
   deleteCard = (cardId) => {
     this.setState({
-      card: this.state.card.filter((card) => card.id !== cardId),
+      cards: this.state.cards.filter((card) => card.id !== cardId),
     });
   };
-
   clearError = () => {
     this.setState({ error: null });
   };
@@ -80,10 +77,9 @@ export class UserProvider extends Component {
   render() {
     const value = {
       userId: localStorage.getItem('user_id'),
-      list: this.state.list,
-      card: this.state.card,
-      projectId: this.state.projectId,
-      project: this.state.project,
+      lists: this.state.lists,
+      cards: this.state.cards,
+      projects: this.state.projects,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
