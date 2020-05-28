@@ -13,6 +13,10 @@ import PrivateRoute from '../../components/Utils/PrivateRoute';
 
 export default class App extends Component {
   render() {
+    // let sideDrawer;
+    // if (this.context.sideDrawerOpen) {
+    //   sideDrawer = <Nav />;
+    // }
     return (
       <div className='App'>
         <header className='App__header'>

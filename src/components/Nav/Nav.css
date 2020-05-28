@@ -5,6 +5,7 @@
 
 .nav-app {
   position: fixed;
+  top: 0;
   left: -250px;
   width: 250px;
   height: 100vh;
@@ -98,8 +99,8 @@ label #cancel {
 }
 @media screen and (min-width: 1000px) {
   label #btn {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 90px;
     padding: 15px;
     left: 25px;
   }

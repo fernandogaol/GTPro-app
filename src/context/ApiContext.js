@@ -19,6 +19,8 @@ const userContext = React.createContext({
   deleteList: () => {},
   deleteCard: () => {},
   clearError: () => {},
+  drawerToggleClickHandler: () => {},
+  handleBackdropClose: () => {},
 });
 export default userContext;
 
@@ -28,7 +30,16 @@ export class UserProvider extends Component {
     userId: [],
     lists: [],
     cards: [],
+    sideDrawerOpen: false,
     error: null,
+  };
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+  handleBackdropClose = () => {
+    this.setState({ sideDrawerOpen: false });
   };
 
   setUserId = (userId) => {
@@ -93,6 +104,8 @@ export class UserProvider extends Component {
       deleteList: this.deleteList,
       addCard: this.addCard,
       deleteCard: this.deleteCard,
+      handleBackdropClose: this.handleBackdropClose,
+      drawerToggleClickHandler: this.drawerToggleClickHandler,
     };
     return (
       <userContext.Provider value={value}>
