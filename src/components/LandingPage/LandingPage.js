@@ -43,12 +43,14 @@ export default class LandingPage extends Component {
           </ul>
           <span className='slide-tolearn'>
             {' '}
-            Learn how it works by sliding through the slides below
+            Learn how it works by sliding through the slides below. Try it out
+            with our demo user. <b></b>Username: demouser<br></br>Password:
+            Demouser123
           </span>
         </div>
         <Slider {...settings}>
           <section className='dashboard section-2'>
-            <p>As soon as you login with your account, start being creative</p>
+            <p>As soon as you login, start being creative</p>
           </section>
           <section className='first-project section-3'>
             <p>Create your first project in seconds</p>
