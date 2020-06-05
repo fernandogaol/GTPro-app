@@ -10,17 +10,15 @@ import DashboardList from '../../routes/DashboardList/DashboardList';
 import ProjectList from '../../components/ProjectList/ProjectList';
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute';
 import PrivateRoute from '../../components/Utils/PrivateRoute';
+import MenuContainer from '../../components/Nav/MenuContainer';
 
 export default class App extends Component {
   render() {
-    // let sideDrawer;
-    // if (this.context.sideDrawerOpen) {
-    //   sideDrawer = <Nav />;
-    // }
     return (
       <div className='App'>
         <header className='App__header'>
-          <Nav />
+          <div id='logo'></div>
+          <MenuContainer />
         </header>
         <main className='App__main'>
           <Switch>

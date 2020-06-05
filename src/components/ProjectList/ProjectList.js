@@ -42,13 +42,6 @@ export default class ProjectList extends Component {
     return (
       <section className='ProjectList'>
         <h1>Board</h1>
-        <div className='renderProjects'>
-          {error ? (
-            <p className='red'> There was an error, please try again</p>
-          ) : (
-            this.renderProjects()
-          )}
-        </div>
         <form className='AddProjectForm' onSubmit={this.handleSubmit}>
           <input
             type='text'
@@ -60,6 +53,13 @@ export default class ProjectList extends Component {
             <FontAwesomeIcon icon={faPlus} id='plusBtn' />
           </button>
         </form>
+        <div className='renderProjects'>
+          {error ? (
+            <p className='red'> There was an error, please try again</p>
+          ) : (
+            this.renderProjects()
+          )}
+        </div>
       </section>
     );
   }

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Card from './Cards';
 
-describe('<NewPostForm />', () => {
+describe.only('<NewPostForm />', () => {
   it('Renders without crashing', () => {
     shallow(<Card />);
   });

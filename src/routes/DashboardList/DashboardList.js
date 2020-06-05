@@ -71,15 +71,6 @@ export default class DashboardList extends Component {
             Board
           </Link>
         </div>
-        <div className='renderLists'>
-          {' '}
-          {error ? (
-            <p className='red'> There was an error, please try again</p>
-          ) : (
-            this.renderLists()
-          )}
-        </div>
-
         <form className='addListForm' onSubmit={this.handleSubmit}>
           <input
             type='text'
@@ -92,6 +83,14 @@ export default class DashboardList extends Component {
             <FontAwesomeIcon icon={faPlus} id='plusBtn' />
           </button>
         </form>
+        <div className='renderLists'>
+          {' '}
+          {error ? (
+            <p className='red'> There was an error, please try again</p>
+          ) : (
+            this.renderLists()
+          )}
+        </div>
       </section>
     );
   }

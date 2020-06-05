@@ -1,9 +1,9 @@
 .section-app {
   text-align: left;
-  padding: 22px;
-  font-size: 22px;
+  padding: 40px;
+  font-size: 18px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
   line-height: 40px;
@@ -15,7 +15,7 @@
 }
 .gtpro-welcome {
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 23px;
 }
 .logo {
   background: url('../Img//logo.png');
@@ -41,6 +41,9 @@
   padding: 10px;
   font-weight: bold;
   border-radius: 7px;
+}
+.section-app a:hover {
+  transform: scale(1.1, 1.1);
 }
 .learn-more {
   height: 110vh;
@@ -264,8 +267,8 @@
     width: 750px;
   }
   .logo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
   .learn-more {
     padding: 100px;

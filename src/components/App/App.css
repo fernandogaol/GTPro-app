@@ -12,3 +12,19 @@ body {
   /* padding-bottom: 60px;
   height: 100%; */
 }
+#logo {
+  background: url('../Img//logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 100px;
+  position: absolute;
+  right: 3px;
+  top: 10px;
+}
+@media screen and (min-width: 1000px) {
+  #logo {
+    height: 120px;
+    width: 120px;
+  }
+}

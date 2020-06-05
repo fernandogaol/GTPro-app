@@ -22,8 +22,9 @@ export default class LandingPage extends Component {
         <section className='section-app section-1'>
           <h3>
             <span className='gtpro-welcome'>Welcome to GT Pro</span>, your most
-            efficient and practical project manager. Keep track of your to do
-            list, vacation plans, and more. Start managing your projects now!{' '}
+            efficient and practical project management application. Keep track
+            of your to do list, vacation plans, and more. Start managing your
+            projects now!{' '}
           </h3>
           <Link to='/register'>Register now for free!</Link>
           <div className='managing-projects'></div>

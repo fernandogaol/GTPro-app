@@ -7,9 +7,8 @@ import { faQrcode } from '@fortawesome/free-solid-svg-icons';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import TokenService from '../../services/token-service';
+
 import './Nav.css';
 
 class Nav extends Component {
@@ -60,22 +59,27 @@ class Nav extends Component {
     );
   }
   render() {
+    let visibility = 'hide';
+
+    if (this.props.menuVisibility) {
+      visibility = 'show';
+    }
     return (
       <>
-        <input type='checkbox' id='check'></input>
-        <label htmlFor='check'>
-          <FontAwesomeIcon icon={faBars} id='btn' />
-          <FontAwesomeIcon icon={faTimes} id='cancel' />
-        </label>
-        <nav className='nav-app'>
-          <header>
+        <div
+          className='nav-app'
+          id='flyoutMenu'
+          onMouseDown={this.props.handleMouseDown}
+          className={visibility}
+        >
+          <header id='nav-header'>
             <Link to='/'>GT Pro</Link>
           </header>
 
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
-        </nav>
+        </div>
       </>
     );
   }
