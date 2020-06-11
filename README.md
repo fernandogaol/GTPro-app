@@ -1,68 +1,99 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GTPro
 
-## Available Scripts
+> A project management application
 
-In the project directory, you can run:
+[![Build Status][travis-image]][travis-url]
+[![NPM Version][npm-image]][npm-url]
 
-### `npm start`
+## Live App link
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- # https://gtpro-app.com/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Live Api Link
 
-### `npm test`
+- # https://sheltered-savannah-63454.herokuapp.com
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Client deployed on zeit
+- Server deployed on Heroku
 
-### `npm run build`
+## App Images
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+  <img width="223" height="450" src="assets/landing-page.png">
+  <img width="223" height="450" src="assets/login-page.png">
+  <img width="223" height="450" src="assets/registration-page.png">
+  <img width="223" height="450" src="assets/user-dashboard.png">
+  <img width="223" height="450" src="assets/project-lists-and-cards.png">
+</p>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Summary
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+GTPro is a project management application that allows users to keep track of their personal and work to-do lists and projects. When logged in, a user can start creating projects in his/her board in order to keep track of his/her to-do lists. Each project gives the user the ability to create lists and to add cards to each list accordingly.
 
-### `npm run eject`
+## Technology Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Front End
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML5
+- CSS
+- JavaScript
+- React
+- Enzyme
+- Redux
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Back End
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Node.js
+- Express
+- Mocha
+- Chai
+- PostgreSQL
+- Passport
+- JWT Authentication
 
-## Learn More
+### Development Environment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Git
+- GitHub
+- Postman
+- DBeaver
+- Visual Studio Code
+- GitHub Projects
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Documentation
 
-### Code Splitting
+### API endpoints
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- POST to '/api/auth/login' authenticate and login returning user
+- POST to '/api/users' inserts a new user into database
+- GET to '/api/users' get all users from database
+- GET to '/api/user/:id' get a user by id
+- DELETE to '/api/user/:id' delete a user by id
+- PATCH to '/api/user/:id' update a user by id
+- GET to '/api/cards' get all cards from database
+- GET to /api/cards/list/:list_id get a card by list id
+- GET to '/api/cards/:card_id' get a card by id
+- POST to '/api/cards' insert a card into the database
+- DELETE to '/api/cards/:card_id' delete a card by id
+- PATCH to '/api/cards/:card_id' update a card by id
+- GET to '/api/lists' get all lists from database
+- GET to /api/lists//project/:project_id get a list by project id
+- GET to '/api/lists/:list_id' get a list by id
+- POST to '/api/lists' insert a list into the database
+- DELETE to '/api/lists/:list_id' delete a list by id
+- PATCH to '/api/lists/:list_id' update a list by id
+- GET to '/api/projects' get all projects from database
+- GET to /api/projects/user/:user_id get a project by user id from database
+- GET to '/api/projects/:project_id' get a project by id from database
+- POST to '/api/projects' insert a project into the database
+- DELETE to '/api/projects/:project_id' delete a project by id from database
+- PATCH to '/api/projects/:project_id' update a project by id from database
 
-### Analyzing the Bundle Size
+<!-- Markdown link & img dfn's -->
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---

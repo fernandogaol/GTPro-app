@@ -95,3 +95,7 @@ export default class DashboardList extends Component {
     );
   }
 }
+
+DashboardList.propTypes = {
+  cards: PropTypes.array,
+};

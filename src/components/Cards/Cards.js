@@ -35,6 +35,3 @@ export default class Cards extends Component {
     );
   }
 }
-Cards.propTypes = {
-  cards: PropTypes.object,
-};
