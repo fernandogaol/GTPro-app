@@ -3,7 +3,6 @@ import CardsApiService from '../../services/cards-api-service';
 import userContext from '../../context/ApiContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import PropTypes from 'prop-types';
 import './Cards.css';
 
 export default class Cards extends Component {

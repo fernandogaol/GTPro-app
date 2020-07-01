@@ -17,7 +17,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <header className='App__header'>
-          <div id='logo'></div>
+          {/* <div id='logo'></div> WILL BE USED IN THE FUTURE*/}
           <MenuContainer />
         </header>
         <main className='App__main'>

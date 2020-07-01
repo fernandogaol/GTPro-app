@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import LoginForm from './LoginForm';
+import DashboardProjects from './DashboardProjects';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<LoginForm />).toJSON();
+  const tree = renderer.create(<DashboardProjects />).toJSON();
   expect(tree).toMatchSnapshot();
 });

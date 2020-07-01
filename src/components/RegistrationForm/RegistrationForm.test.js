@@ -1,8 +1,8 @@
-// import React from 'react';
-// import renderer from 'react-test-renderer';
-// import RegistrationForm from './RegistrationForm';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import RegistrationForm from './RegistrationForm';
 
-// it('renders correctly', () => {
-//   const tree = renderer.create(<RegistrationForm />).toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
+it('renders correctly', () => {
+  const tree = renderer.create(<RegistrationForm />).toJSON();
+  expect(tree).toMatchSnapshot();
+});

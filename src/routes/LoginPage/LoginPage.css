@@ -8,7 +8,25 @@
   margin: 0 auto;
   font-weight: bold;
 }
-
+.login-demo {
+  padding: 10px;
+  color: black;
+  font-size: 18px;
+  text-shadow: 2px 2px white;
+  border: 2px solid rgb(48, 28, 224);
+  border-radius: 7px;
+  width: 280px;
+}
 .LoginPage h2 {
   padding: 40px;
+}
+@media screen and (min-width: 450px) {
+  .login-demo {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .login-demo {
+    width: 500px;
+  }
 }

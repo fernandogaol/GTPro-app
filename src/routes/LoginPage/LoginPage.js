@@ -18,6 +18,13 @@ export default class LoginPage extends Component {
   render() {
     return (
       <section className='LoginPage'>
+        <div className='login-demo'>
+          <span className='slide-tolearn'>
+            {' '}
+            Try it out with our demo user. <b></b>Username: demouser<br></br>
+            Password: Demouser123
+          </span>
+        </div>
         <h2>Log In </h2>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </section>

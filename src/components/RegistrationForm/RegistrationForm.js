@@ -38,19 +38,17 @@ export default class RegistrationForm extends Component {
       <form className='RegistrationForm' onSubmit={this.handleSubmit}>
         <div role='alert'>{error && <p className='red'>{error}</p>}</div>
         <div className='full_name'>
-          <label htmlFor='RegistrationForm__full_name'>Full name</label>
           <Input
             name='full_name'
-            placeholder='Joe Doe'
+            placeholder='Enter full name'
             type='text'
             id='RegistrationForm__full_name'
           ></Input>
         </div>
         <div className='user_name'>
-          <label htmlFor='RegistrationForm__user_name'>Username</label>
           <Input
             name='user_name'
-            placeholder='JoeDoe'
+            placeholder='Enter user name'
             type='text'
             id='RegistrationForm__user_name'
           ></Input>
@@ -64,10 +62,9 @@ export default class RegistrationForm extends Component {
           ></Input>
         </div> */}
         <div className='password'>
-          <label htmlFor='RegistrationForm__password'>Password</label>
           <Input
             name='password'
-            placeholder='Password123'
+            placeholder='Enter password'
             type='password'
             id='RegistrationForm__password'
           ></Input>

@@ -39,6 +39,10 @@
   padding: 10px;
   margin: 5px;
 }
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 480px) {
   .LoginForm input {
     width: 250px;

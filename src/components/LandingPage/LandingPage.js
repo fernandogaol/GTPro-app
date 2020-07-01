@@ -42,12 +42,6 @@ export default class LandingPage extends Component {
             <li>Kanban systems</li>
             <li>and more</li>
           </ul>
-          <span className='slide-tolearn'>
-            {' '}
-            Learn how it works by sliding through the slides below. Try it out
-            with our demo user. <b></b>Username: demouser<br></br>Password:
-            Demouser123
-          </span>
         </div>
         <Slider {...settings}>
           <section className='dashboard section-2'>

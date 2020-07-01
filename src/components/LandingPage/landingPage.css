@@ -3,7 +3,7 @@
   padding: 40px;
   font-size: 18px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   line-height: 40px;
@@ -12,10 +12,11 @@
 }
 .section-1 h3 {
   color: black;
+  font-size: 19px;
 }
 .gtpro-welcome {
   font-weight: bolder;
-  font-size: 23px;
+  font-size: 21px;
 }
 .logo {
   background: url('../Img//logo.png');
@@ -38,18 +39,20 @@
   color: #fff;
   background: #61bd4f;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 10px;
+  padding: 15px;
   font-weight: bold;
   border-radius: 7px;
+  width: 240px;
+  text-align: center;
 }
 .section-app a:hover {
   transform: scale(1.1, 1.1);
 }
 .learn-more {
-  height: 110vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: left;
   padding: 15px;
   font-weight: bold;
@@ -57,23 +60,16 @@
   border-bottom: 10px solid #fff;
 }
 .learn-tricks {
-  font-size: 25px;
+  font-size: 18px;
   border-radius: 40px;
   padding: 10px;
   color: black;
   text-shadow: 2px 2px white;
 }
-.slide-tolearn {
-  padding: 10px;
-  color: black;
-  font-size: 23px;
-  text-shadow: 2px 2px white;
-  border: 2px solid rgb(48, 28, 224);
-  border-radius: 7px;
-}
+
 .learn-more li {
   text-align: left;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 50px;
   list-style: inside;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -92,6 +88,7 @@
 .section-5 {
   display: flex !important;
   justify-content: flex-end;
+  margin: auto;
 }
 .section-2 p,
 .section-3 p,
@@ -111,7 +108,7 @@
 .first-project,
 .create-lists,
 .create-cards {
-  width: 370px !important;
+  width: 90% !important;
 }
 
 .first-project {
@@ -182,28 +179,38 @@
     padding: 30px;
   }
   .learn-tricks {
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px;
     text-align: center;
   }
   .learn-more li {
-    font-size: 22px;
+    font-size: 14px;
     line-height: 60px;
   }
-  .slide-tolearn {
-    font-size: 26px;
-    padding: 20px;
-    text-align: center;
+
+  .dashboard,
+  .first-project,
+  .create-lists,
+  .create-cards {
+    width: 400px !important;
   }
 }
 @media screen and (min-width: 750px) {
   .section-app {
     padding: 80px;
-    font-size: 30px;
-    line-height: 55px;
+    line-height: 40px;
+  }
+  .section-app h3 {
+    font-size: 21px;
+  }
+  .section-app span {
+    font-size: 23px;
+  }
+  .section-app a {
+    width: 270px;
   }
   .gtpro-welcome {
-    font-size: 40px;
+    font-size: 22px;
   }
   .managing-projects {
     height: 350px;
@@ -213,25 +220,20 @@
     padding: 40px;
   }
   .learn-tricks {
-    font-size: 32px;
+    font-size: 25px;
     padding: 20px;
     text-align: center;
   }
   .learn-more li {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 60px;
   }
-  .slide-tolearn {
-    font-size: 30px;
-    padding: 20px;
-    text-align: center;
-  }
+
   .dashboard,
   .first-project,
   .create-lists,
   .create-cards {
     height: 95vh;
-    width: 500px !important;
     margin: 0 auto;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -262,9 +264,11 @@
     width: 80%;
     margin: auto;
   }
-  .managing-projects {
-    height: 400px;
-    width: 750px;
+  .section-app h3 {
+    font-size: 24px;
+  }
+  .section-app span {
+    font-size: 26px;
   }
   .logo {
     width: 120px;
@@ -276,25 +280,15 @@
     margin: auto;
   }
   .learn-tricks {
-    font-size: 35px;
-    padding: 20px;
-    text-align: center;
-  }
-  .learn-more li {
-    font-size: 26px;
-    line-height: 70px;
-  }
-  .slide-tolearn {
     font-size: 30px;
     padding: 20px;
     text-align: center;
   }
-  .dashboard,
-  .first-project,
-  .create-lists,
-  .create-cards {
-    width: 500px !important;
+  .learn-more li {
+    font-size: 22px;
+    line-height: 60px;
   }
+
   .section-2 p,
   .section-3 p,
   .section-4 p,

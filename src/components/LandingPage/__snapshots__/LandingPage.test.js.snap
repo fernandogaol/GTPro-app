@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="landing__page"
+>
+  <div
+    className="logo"
+  />
+  <section
+    className="section-app section-1"
+  >
+    <h3>
+      <span
+        className="gtpro-welcome"
+      >
+        Welcome to GT Pro
+      </span>
+      , your most efficient and practical project management application. Keep track of your to do list, vacation plans, and more. Start managing your projects now!
+       
+    </h3>
+    <div
+      className="managing-projects"
+    />
+  </section>
+  <div
+    className="learn-more"
+  >
+    <h2
+      className="learn-tricks"
+    >
+      Learn all the tricks before you get started. GTPro makes it easy to manage
+    </h2>
+    <ul>
+      <li>
+        Work tasks and duties
+      </li>
+      <li>
+        Team projects
+      </li>
+      <li>
+        Homework
+      </li>
+      <li>
+        School projects
+      </li>
+      <li>
+        Kanban systems
+      </li>
+      <li>
+        and more
+      </li>
+    </ul>
+    <span
+      className="slide-tolearn"
+    >
+       
+      Learn how it works by sliding through the slides below. Try it out with our demo user. 
+      <b />
+      Username: demouser
+      <br />
+      Password: Demouser123
+    </span>
+  </div>
+  <section
+    className="dashboard section-2"
+  >
+    <p>
+      As soon as you login, start being creative
+    </p>
+  </section>
+  <section
+    className="first-project section-3"
+  >
+    <p>
+      Create your first project in seconds
+    </p>
+  </section>
+  <section
+    className="create-lists section-4"
+  >
+    <p>
+      Create lists to start keeping track of tasks
+    </p>
+  </section>
+  <section
+    className="create-cards section-5"
+  >
+    <p>
+      Add cards to keep track of ideas and progress
+    </p>
+  </section>
+  <section
+    className="sell-out"
+  >
+    <h3
+      className="sell-out-h3"
+    >
+      Make sure to sign up and invite your friends and family members. We are counting on you!
+      <br />
+      <br />
+      GTPro is a platform that offers productivity with simplicity. Team up, or use it alone. GTPro - be producitve and creative your way!
+    </h3>
+  </section>
+</div>
+`;
