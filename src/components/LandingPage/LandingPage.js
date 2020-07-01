@@ -64,7 +64,7 @@ export default class LandingPage extends Component {
             are counting on you!<br></br>
             <br></br>
             GTPro is a platform that offers productivity with simplicity. Team
-            up, or use it alone. GTPro - be producitve and creative your way!
+            up, or use it alone. GTPro - be productive and creative your way!
           </h3>
         </section>
       </div>
