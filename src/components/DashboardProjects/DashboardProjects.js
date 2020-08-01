@@ -21,7 +21,9 @@ export default class DashboardProjects extends Component {
 
     return (
       <div className='DashboardProjects'>
-        <Link to={`/projects/${project.id}/lists`}>{project.title}</Link>
+        <Link to={`/projects/${project.id}/${project.title}`}>
+          {project.title}
+        </Link>
         <button onClick={() => this.handleDelete(project.id)} type='submit'>
           {' '}
           <FontAwesomeIcon icon={faTrashAlt} id='deleteBtn' />

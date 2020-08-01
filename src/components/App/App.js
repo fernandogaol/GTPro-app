@@ -30,7 +30,7 @@ export default class App extends Component {
             <PrivateRoute exact path={'/projects'} component={ProjectList} />
 
             <PrivateRoute
-              path={'/projects/:id/lists'}
+              path={'/projects/:id/:title'}
               component={DashboardList}
             />
 

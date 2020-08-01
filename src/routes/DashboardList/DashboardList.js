@@ -18,6 +18,7 @@ export default class DashboardList extends Component {
   };
   componentDidMount() {
     let project_id = this.props.match.params.id;
+
     this.context.clearError();
     ListApiService.getList(project_id)
       .then(this.context.setList)
@@ -48,7 +49,10 @@ export default class DashboardList extends Component {
 
     this.setState({ error: null });
 
-    ListApiService.postList({ project_id: projectId, title: title.value })
+    ListApiService.postList({
+      project_id: projectId,
+      title: title.value,
+    })
       .then(this.context.addList)
       .then(() => {
         title.value = '';
@@ -57,12 +61,13 @@ export default class DashboardList extends Component {
   };
   render() {
     const { error } = this.context;
+    let projectName = this.props.match.params.title;
 
     return (
       <section className='List'>
         <header>
           {' '}
-          <h1>Lists</h1>
+          <h1>{projectName}</h1>
         </header>
 
         <div className='goBackLink'>
